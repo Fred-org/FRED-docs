@@ -19,5 +19,5 @@ out folder
 
     .. Caution:: This directory is completely erased each time a simulation is run.
 
-plugin fonder
-    A *plugin* directory can contain user-written code in the form of a dynamically loaded pluginx that expand the capability of FRED code.
+plugin folder
+    A *plugin* directory can contain user-written code in the form of a dynamically loaded plugin that expands the capability of FRED code.

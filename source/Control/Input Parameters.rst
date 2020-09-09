@@ -81,7 +81,7 @@ The input files are parsed by FRED using a free format text syntax. Efforts have
 White spaces
 ````````````````````````````````````````````
 
-In general, white spaces (spaces, tabs, etc.) are ignored not considered. Exception is the definition of strings (names, paths, etc.) where white space is preserved.
+In general, white spaces (spaces, tabs, etc.) are ignored and discarded. Exception is the definition of strings (names, paths, etc.) where white space is preserved.
 
 
 Comments
