@@ -4,3 +4,7 @@ _build
 build
 
 .DS_Store
+
+FRED-docs.sublime-project
+
+FRED-docs.sublime-workspace
