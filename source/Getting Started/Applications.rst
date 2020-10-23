@@ -4,7 +4,7 @@ Applications
 Sapienza, Rome, Italy
 ------------------------------------------------------
 
-??
+FRED is developed and continuously upgraded in order to support many R&D projects of the Medical Physics Group at SBAI Department. Master theses and PhD projects are offered to students in order to introduce new physics models in the main code. FRED is also used as a particle tracking tool in the design of new detectors and imaging diagnostics techniques to be introduced in the clinical practice.
 
 CCB, Krakow, Poland
 ------------------------------------------------------

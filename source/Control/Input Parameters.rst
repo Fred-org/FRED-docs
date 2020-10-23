@@ -155,7 +155,7 @@ The multi-line definition splits the declaration of an object into several lines
 
 Units
 ````````````````````````````````````````````
-FRED is using a predefined units for inputs and outputs. In input files FRED is using:
+FRED is using predefined units for inputs and outputs. In input files FRED is using:
 
 - All dimensional inputs, like region size definition, region translations, etc. are given in [cm].
 - All angles, mostly for rotations, are given in [degrees].
@@ -170,3 +170,5 @@ FRED outputs the simulation results in units:
 - Dose, including the RBE-weighted dose are saved in [Gy].
 - Dose-averaged LET is saved in [MeV/cm].
 - Density  is saved in [g/cm\ :sup:`3`].
+- Deposited energy is saved in [MeV].
+

@@ -91,3 +91,6 @@ FRED_VERBOSE = {0..5} (def. 3)
 
         verbose: all {0..5}
 
+FRED_ANSI_COLORS = t|true
+    Tell FRED to pretty-color the output to the terminal. By default coloring is off, and it can be turned on using this environment variable. The command line option `-C` can also be used on a run by run basis.
+

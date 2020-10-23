@@ -6,7 +6,7 @@ The definition of a simulation geometry includes the description of regions (ran
 Region definition
 ------------------------------------------------------
 
-Region is the fundamental building block for defining the geometry of a simulation. Currently, FRED is working only in Cartesian coordinate system and allows for regions with the shape of a rectangular box. A region is described by a set of parameters defining its field of reference (FoR), material, scoring and many other. Some of the parameters are mandatory, which is explicitly marked and the default parameters for the optional are given.
+Region is the fundamental building block for defining the geometry of a simulation. Currently, FRED is working only in Cartesian coordinate system and allows for regions with the shape of a rectangular box. A region is described by a set of parameters defining its field of reference (FoR), material, scoring and many others. Some of the parameters are mandatory, which is explicitly marked and the default parameters for the optional are given.
 
     ID : regionID (mandatory)
         Name or number identifying the region.
