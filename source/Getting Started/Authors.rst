@@ -1,7 +1,7 @@
 Authors
 =================================
 
-Angelo Schiavi (`Sapienza University <https://www.uniroma1.it/en/pagina-strutturale/home>`_, Rome, Italy)
+Angelo Schiavi (`Sapienza University <https://www.uniroma1.it/en/pagina-strutturale/home>`_, Rome, Italy) |imageASch|
     the main developer
 
 dr Jan Gajewski (`IFJ <https://www.ifj.edu.pl/en/index.php>`_, Krakow, Poland) |imageJGa|
@@ -12,3 +12,7 @@ dr Jan Gajewski (`IFJ <https://www.ifj.edu.pl/en/index.php>`_, Krakow, Poland) |
 .. |imageJGa| image:: autorPhotos/JanGajewski.JPG
   :width: 70
   :alt: Jan Gajewski photo
+
+.. |imageASch| image:: autorPhotos/ASchiavi.png
+  :width: 70
+  :alt: Angelo Schiavi photo

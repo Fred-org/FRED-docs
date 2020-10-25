@@ -111,7 +111,7 @@ General options
 .. index::  ! option -useVers
 
 -useVers fredVersion
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
       Switch to **fredVersion** version temporary (only for current simulation).
 
@@ -123,13 +123,24 @@ General options
 .. index::  ! option -colorOutput
 
 -colorOutput | -C
-~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
 
       Activate color output for ANSI compatible terminals.
 
 
+.. index::  ! option -particles
 
+-particles 
+~~~~~~~~~~
 
+    Print information on defined particles.
+
+.. index::  ! option -materials
+
+-materials 
+~~~~~~~~~~
+
+    Print information on built-in material definitions.
 
 
 Simulation control
