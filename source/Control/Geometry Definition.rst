@@ -3,6 +3,8 @@ Geometry Definition
 
 The definition of a simulation geometry includes the description of regions (range shifters, etc. ), fields, phantom and other physical parts of a simulation, that should be included in the particle tracking. All the elements of a simulation geometry are placed in **Room** region.
 
+.. index::  ! Region
+
 Region definition
 ------------------------------------------------------
 
@@ -35,7 +37,7 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
         Number of volume subdivisions along each direction.
 
     maxStepSize = 10
-        Maximum step length allowed inside this region.
+        Maximum geometrical step length (in cm) allowed inside this region.
 
     rescale = 1
         Rescaling factor for the whole region. It can be used for instance to shrink or inflate a voxel map loaded from file.
@@ -73,12 +75,30 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
     lWriteCTHU = True
         Save the CTHU map. It works only when *CTscan* is given. This map is basically a copy of a CT map given in *CTscan*. The saved file is used by sceneViewerFred.py script to map a CT on scene and by mhd_overlay.py script to create a background for dose distribution.
 
+Example
+
+.. code-block:: none
+    
+    region: phantom ; O = [ 0, 0, 0]; L=[10,10,10]; f = [ 0, 0, 1] ; u = [ 0, 1, 0] ; pivot = [ 0.5, 0.5, 0.5]
+    region: detector_1 ; O = [ 20, 0, 20] ; L=[10,10,5]; f = [ 1, 0, 1] ; u = [ 0, 1, 0] ; pivot = [ 0.5, 0.5, 0]
+    region: detector_2 ; O = [ 0, 0, 35 ] ; L=[10,10,5]; f = [ 0, 0, 1] ; u = [ 0, 1, 0] ; pivot = [ 0.5, 0.5, 0]
+    region: detector_3 ; O = [ -15, 0,15] ; L=[10,10,5]; f = [ -1, 0, 1] ; u = [ 0, 1, 0] ; pivot = [ 0.5, 0.5, 0]
+
+.. figure:: images/Phantom_3Detectors.png
+    :alt: geometry setup
+    :align: center
+    :width: 50%
+
+    Phantom and 3 detectors pointing at the isocentre.
+
+
+.. index::  ! Field
 
 
 Field definition
 ------------------------------------------------------
 
-Field is a structure describing an irradiation direction of a beam-like source of particles. It is essentially the definition of a reference frame with respect to the Room frame. The front vector is the main beam direction, also known as the beam-axis. The up and left vectors are defined as in the figure below.
+Field is a structure describing an irradiation direction of a beam-like source of particles. It is essentially the definition of a reference frame with respect to the Room frame. The **front** vector is the main beam direction, also known as the beam-axis. The **up** and **left** vectors are defined as in the figure below.
 
 .. figure:: images/Field_FoR.png
     :alt: field reference frame
@@ -105,11 +125,20 @@ A field is described with a few parameters. Some of the parameters are mandatory
         Distance from the source to the exit window along the front direction. Particles are transported in vacuum up to the exit window, and in the Room material after exit.
 
 
-The *front* and *up* vector are normalized internally to unit vectors, so they can be more easily specified in input. For instance, **f=[1,1,0]** corresponds to a horizontal propagation direction at 45° with respect to *X* and *Y* axes.
+The *front* and *up* vectors are normalized internally to unit vectors, so they can be more easily specified in input. For instance, **f=[1,1,0]** corresponds to a horizontal propagation direction at 45° with respect to *X* and *Y* axes.
 
 If no fields are specified in the input file, then a field with ID=0 is created with parameters corresponding to the following line:
 
 .. code-block:: python
 
-    field: 0 ; O = [ 0, 0, -10]; f = [ 0, 0, 1] ; u = [ 0, 1, 0]
+    field: 0 ; O = [ 0, 0, -50]; f = [ 0, 0, 1] ; u = [ 0, 1, 0] ; L = [20,20,50] ; pivot = [0.5,0.5,0.2]
 
+.. figure:: images/Field_0.png
+    :alt: default field
+    :align: center
+    :width: 70%
+
+    The default field *Field_0*.
+
+.. note::
+    If you explicitly define one or more fields (for instance Field_1), then the default Field_0 is not created, and only the user defined fields are used.

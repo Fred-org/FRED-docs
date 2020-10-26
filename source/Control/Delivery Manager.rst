@@ -3,12 +3,12 @@ Delivery Manager
 
 The delivery manager takes care of the steps corresponding to an irradiation plan. There are two main categories of operations: the geometry transformations and the delivery of particles. Each delivery step consists in a preparatory phase, where the geometry is transformed, followed by a series of delivery actions. The directives found in the input file are parsed in sequential order.
 
-.. index::  ! Geometry transformation
+.. index::  ! Geometry transformation, transform:
 
 Geometry transformation
 -----------------------
 
-These directives allow to move, shift, and rotate regions or groups of regions. By default, all transformations are performed with respect to the *global* (room) frame of reference. You can also specify a different frame of reference (FoR), so for instance you can rotate the phantom around itself, shift it sideways with respect to another region, etc. The general syntax is:
+These directives allow to move, shift, and rotate regions or groups of regions. By default, all transformations are performed with respect to the *global* (room) frame of reference. You can also specify a different frame of reference (FoR), so for instance you can rotate the phantom around itself, shift it sideways with respect to another region, etc. The general syntax for the **transform:** directive is:
 
 .. code-block:: python
 
@@ -78,14 +78,14 @@ Available **actions** are:
         transform: regionList rotate axis angle [FoR]
 
 
-.. index::  ! Logical operations
+.. index::  ! Logical operations, group:, set_parent:, activate:, deactivate:
 
 Logical operations
 -------------------------------
 
 It is possible to group several regions, so that operations can be applied to a group using a single directive. Regions or groups can be activated or deactivated at each step, determining which are actually present during a delivery phase.
 
-- **group**
+- **group:**
 
     Defines a group with name *groupID* containing the regions in *regionList*. Syntax:
 
@@ -102,7 +102,7 @@ It is possible to group several regions, so that operations can be applied to a 
         group: RSplateGroup Plate01 Plate02 Plate03 Plate04 Plate05
 
 
-- **set_parent**
+- **set_parent:**
 
     Region *motherRegionID* is containing the regions in *daughterRegionList*. Syntax:
 
@@ -119,7 +119,7 @@ It is possible to group several regions, so that operations can be applied to a 
         set_parent: gantry fields NozzleGroup
 
 
-- **activate**
+- **activate:**
 
     Regions in *regionList* are actually present in the setup. Syntax:
 
@@ -136,7 +136,7 @@ It is possible to group several regions, so that operations can be applied to a 
         activate: field_1 RS1 phantom
 
 
-- **deactivate**
+- **deactivate:**
 
     Regions in *regionList* are not present in the setup. Syntax:
 
@@ -159,15 +159,15 @@ It is possible to group several regions, so that operations can be applied to a 
         deactivate: RS
 
 
-.. index::  ! Managing geometry configurations
+.. index::  ! Managing geometry configurations, save_regions:, restore:
 
 Managing geometry configurations
 --------------------------------
 
-There are available 10 slots for saving and restoring geometry configurations. The configurations can be saved and restored at any time of the delivery sequence.
+There are 10 available slots for saving and restoring geometry configurations. The configurations can be saved and restored at any time of the delivery sequence.
 
 
-- **save_regions**
+- **save_regions:**
 
     Save the current setup to a given slot. Syntax:
 
@@ -184,7 +184,7 @@ There are available 10 slots for saving and restoring geometry configurations. T
         save_regions: 0
 
 
-- **restore**
+- **restore:**
 
     Restore the setup saved in the given slot. Syntax:
 
@@ -201,12 +201,12 @@ There are available 10 slots for saving and restoring geometry configurations. T
         restore: 3
 
 
-.. index::  ! Beam delivery
+.. index::  ! Beam delivery, deliver: 
 
 Beam delivery
 --------------------------------
 
-The delivery of the beam into the prepared setup can be managed at two levels. We can deliver a single field, i.e. all the pencil beams belonging to that field. We can also deliver pencil beam by pencil beam, changing eventually the setup from one pencil beam to the next one. The **deliver** directive defines which fields of pencil beam will be delivered. This directive comes with various syntax:
+The delivery of the beam into the prepared setup can be managed at two levels. We can deliver a single field, i.e. all the pencil beams belonging to that field. We can also deliver pencil beam by pencil beam, changing eventually the setup from one pencil beam to the next one. The **deliver:** directive defines which fields of pencil beam will be delivered. This directive comes with various syntax:
 
 - deliver all defined fields (this is the default, if no *deliver:* directives are present)
 
@@ -258,7 +258,7 @@ The delivery of the beam into the prepared setup can be managed at two levels. W
         deliver: pb 1:155 3
 
 
-.. index::  ! Invoking scripts
+.. index::  ! Invoking scripts, run_script:, add_searchpath:, postdelivery_script:
 
 Invoking scripts
 --------------------------------
@@ -268,7 +268,7 @@ At different times during a delivery is possible to execute external scritps, e.
 It is possible also to queue scritps to be executed at the end of a run, after all beam deliveries have been carried out. This is an opportunity to collect data and info from a simulation just before exiting the program.
 
 
-- **run_script**
+- **run_script:**
 
     Invokes the listed scripts in the given order. The number of current delivery step is passed over to the script as first argument. The interpreter to be used is guessed by the script file extension, e.g **.sh**  scripts are executed by **sh**, and **.py** scripts are executed by **python**. Syntax:
 
@@ -292,7 +292,7 @@ It is possible also to queue scritps to be executed at the end of a run, after a
         ...
 
 
-- **add_searchpath**
+- **add_searchpath:**
 
     Prepends the paths to the list of searched locations. When a script is invoked, the current working directory of the simulation is searched first, then the search paths are followed to find the script. Syntax:
 
@@ -317,7 +317,7 @@ It is possible also to queue scritps to be executed at the end of a run, after a
 
 
 
-- **postdelivery_script**
+- **postdelivery_script:**
 
     Appends the listed scripts to the queue of scritps that will be executed just before exiting the program, after all delivery steps are carried out. Syntax:
 

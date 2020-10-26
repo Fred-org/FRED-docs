@@ -1,3 +1,5 @@
+.. index::  ! Material
+
 Material Definition
 =================================
 
@@ -34,6 +36,8 @@ In this case, the mandatory parameters are becoming optional and can be used to 
 
 Currently, the predefined materials in FRED are Vacuum, BlackHole, Water, Air, PMMA, Al, Ti, Cu, Ni, Si and LEXAN.
 
+.. tip ::
+    Run the command ``fred -materials`` to get detailed information on the predefined materials.
 
 Example of material definition
 ----------------------------------------------------------

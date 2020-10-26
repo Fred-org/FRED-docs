@@ -30,7 +30,6 @@ General options
 
 .. index::  ! option -f
 
-
 -f path
 ~~~~~~~~~~~~~~~
 

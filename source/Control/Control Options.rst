@@ -4,6 +4,8 @@ Control Options
 There are many options, that can be used in an input file to control a simulation. In the list below, the default values are given.
 
 
+.. index::  ! lRBE_write_DoseBio,lRBE_write_Alpha,lRBE_write_Beta,lRBE_write_RBE
+
 Radiobiology
 ~~~~~~~~~~~~~~~~~~
 By default, when an RBE model is activated, FRED writes only the corresponding biological dose map.
@@ -21,6 +23,8 @@ For instance, if McNamara RBE model for protons is activated (``lRBE_McNamara=t`
     ``lRBE_write_RBE = f``
         write RBE values
 
+
+.. index::  ! Verbosity
 
 Verbosity
 ~~~~~~~~~~~~~~~~~~
@@ -55,6 +59,8 @@ The sequence that defines the verbosity level is the following:
 	export FRED_VERBOSE='0 delivery 1 geometry source 3'
 
 
+.. index::  ! verbose:
+
 The `verbose:` directive can be used to set the verbosity level separately for each module.
 The modules that can be controlled are: `physics, delivery, plugin, source, geometry, environment, input, materials, radiobiology`.
 
@@ -77,5 +83,24 @@ Example of detailed manipulation of verbosity level:
 Other
 ~~~~~~~~~~~~~~~~~~
 
-lplotray=f
+	
+lplotray = [F|t]
+	.. index::  ! lplotray
+	
+	activate/deactivate output of detailed track information for each traced particle. It can be used for geometry checking and visual debugging of a simulation using ``sceneViewerFred.py`` script.
+
+	.. important::
+		When ``lplotray=t``, the code automatically switches to **serial** execution on a single process on the CPU. Hence use it with just a few primaries per pencil beam, since the tracking rate will be very low and FRED will produce large text files containing all steps of the tracks.
+
+.. figure:: images/lplotray.png
+    :alt: proton tracks
+    :align: center
+    :width: 70%
+
+    Tracks of primary and secondary particles in a water phantom irradiated by 100 MeV proton beam.
+
+
+
 allowOverlapping: gantry phantom
+
+	TODO
