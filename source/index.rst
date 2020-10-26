@@ -13,6 +13,13 @@ Welcome to FRED's documentation!
 
 
 .. toctree::
+   :hidden:
+
+   genindex
+
+
+
+.. toctree::
    :maxdepth: 2
    :caption: Setting up FRED:
 
@@ -26,6 +33,7 @@ Welcome to FRED's documentation!
    Control/Working Directories
    Control/Input Parameters
    Control/Geometry Definition
+   Control/Source Definition
    Control/Material Definition
    Control/Delivery Manager
    Control/Physics Control
