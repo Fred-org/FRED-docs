@@ -65,3 +65,7 @@ Single line definition of graphite:
 .. code-block:: python
 
     material:  Graphite ; rho=1.644 ; composition=[C]; Ipot = 78 ; Lrad =42.7
+
+
+.. toctree::
+    HU Calibration Curve    
