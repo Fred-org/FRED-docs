@@ -8,14 +8,14 @@ FRED can compute the effective biological dose using several built-in RBE models
     :align: center
     :width: 30%
 
-where the relative biological effectiveness (RBE) for proton beams is described using the linear-quadratic method
+where the relative biological effectiveness (RBE) for proton beams is described using the linear-quadratic model
 
 .. figure:: eqns/RBE.png
     :alt:
     :align: center
     :width: 70%
 
-in which ``(alpha/beta)x`` is the reference ratio for X-rays (see, for instance, Polster L. et al, Phys. Med. Biol. 60 (2015) 5053). 
+where ``(alpha/beta)x`` is the reference ratio for X-rays (see, for instance, Polster L. et al, Phys. Med. Biol. **60** (2015) 5053). 
 
 .. index::  ! RBE_alphaX
 .. index::  ! RBE_betaX
@@ -27,14 +27,26 @@ The reference values of ``alpha_X`` and ``beta_X`` can be defined in the input f
 
 	RBE_alphaX = 0.0722	
 	RBE_betaX = 0.0502
+
+.. note::
+	The results of RBE models (e.g. maps of RBE, Dose_Bio, alpha and beta parameters) are saved in the directory ``out/RBE`` which is created only if RBE-based calculations are requested.
 	
+.. index::  ! RBE_Constant
+
+Constant RBE
+------------
+The most simple assumption is to consider proton RBE constant with respect to the dose level delivered to the patient. Given the complexity of the topic, the constant RBE is still a working solution adopted in many treatment centres worldwide. The typical reference value is 1.1 for protons, namely proton dose is on average 10% more effective than the same dose delivered by photons.
+
+RBE_constant = (float)
+	if set, it activates the conversion of physical dose to biological dose using the given constant value. The corresponding dose map is saved in ``out/RBE/DoseBio_Constant.mhd``.
 
 
-The implemented models are grouped into `LETd-based` models and `Table-based` models.
+Variable RBE models are grouped into `LETd-based` models and `Table-based` models.
 
 LETd-based models
------------------
-The following list presents the implemented models with the default values that can be overridden in the input file.
+--------------------
+
+The following section presents the implemented models with the default values that can be overridden in the input file.
 
 
 .. index::  ! lRBE_Carabe,RBE_Carabe
@@ -121,3 +133,6 @@ Wilkens
 	RBE_Wilkens_alpha0 = 0.1
 
 Reference: Wilkens J J and Oelfke U, *A phenomenological model for the relative biological effectiveness in therapeutic proton beams*, Phys. Med. Biol. **49** 2811–25 (2004)
+
+.. note::
+	The amount of information that is saved to disk for each requested RBE model is controlled by :ref:`several flags <Radiobiology_options>`. 

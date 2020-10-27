@@ -6,6 +6,8 @@ There are many options, that can be used in an input file to control a simulatio
 
 .. index::  ! lRBE_write_DoseBio,lRBE_write_Alpha,lRBE_write_Beta,lRBE_write_RBE
 
+.. _Radiobiology_options:
+
 Radiobiology
 ~~~~~~~~~~~~~~~~~~
 By default, when an RBE model is activated, FRED writes only the corresponding biological dose map.

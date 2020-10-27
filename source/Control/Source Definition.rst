@@ -295,6 +295,9 @@ The Virtual point Source Distribution (VSD) describes a source of particles emit
 
 The emittance model describes the propagation of a gaussian beam in absence of active elements (deflecting magnets or focussing quadrupoles). It can be used to describe the beam propagation in the last track of an accelerator beamline. 
 
-TODO
 
+.. toctree::
+   
+   Source_virtual_point_source
+   Source_emittance
 
