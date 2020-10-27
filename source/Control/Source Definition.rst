@@ -283,6 +283,8 @@ Transverse distribution  (a.k.a. cross-section)
     rmax = (float)  [inf]
         particles are generated for r<=rmax in the radial direction
 
+    Demo of spot cross-section manipulation can be found in :ref:`this example <spots_gallery>`.
+
 .. _beam_envelope:
 
 Beam envelope propagation

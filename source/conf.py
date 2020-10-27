@@ -40,6 +40,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.imgmath',
     'sphinx.ext.napoleon',
+    'sphinx_copybutton'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
