@@ -84,7 +84,23 @@ Plugin API
 Getting input parameters for the plugin
 ---------------------------------------
 
-Input parameters for the plugin can be written in the main input file (e.g. ``fred.inp``) and queried using the following parsing routines:
+Input parameters for the plugin can be written in the main input file (e.g. ``fred.inp``) and queried using plugin parsing routines.
+
+    .. important::
+    
+        User-defined parameters must be enclosed in a multiline **plugin<...plugin>** directive as in the following example:
+
+        .. code-block::
+            :emphasize-lines: 1,7
+
+            plugin<
+                myInt = 374
+                myBool = false
+                myString = 'profile.dat'
+                myFloat = -1.234e-12
+                myVec = [1,4,3]
+            plugin>
+
 
     .. c:function:: bool getBoolParam(const char *pname,bool defVal)
 
@@ -387,7 +403,7 @@ This class of functions can be used to access particle and medium properties via
 
 - Random generators attached to current particle
 
-    *to be used if you want a simulation to be reproducible by setting raindSeedRoot in the input file*
+    *to be used if you want a simulation to be reproducible by setting* ``randSeedRoot`` *in the input file*
 
     .. c:function:: float32 getRandUnif(Step *stp)
 

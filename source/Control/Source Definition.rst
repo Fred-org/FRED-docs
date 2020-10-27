@@ -291,11 +291,18 @@ Beam envelope propagation
 """"""""""""""""""""""""""""""
 Three models can be used to describe the evolution of spot size (i.e. its cross-section) along the propagation direction: paraxial, virtual point source and emittance model.
 
-By default the propagation is paraxial, namely the particles are propagating along the pencil beam axis.
+.. figure:: images/Beam_envelope_models.png
+    :alt: beam envelope models
+    :align: center
+    :width: 70%
 
-The Virtual point Source Distribution (VSD) describes a source of particles emitted by a point in space and expanding along the propagation direction with constant divergence. 
+    Beam envelope models
 
-The emittance model describes the propagation of a gaussian beam in absence of active elements (deflecting magnets or focussing quadrupoles). It can be used to describe the beam propagation in the last track of an accelerator beamline. 
+By default the propagation is paraxial, namely the particles are propagating along the pencil beam axis. In paraxial mode, the spot size of the beam is constant (see red line in the Figure above).
+
+The Virtual point Source Distribution (VSD) describes a source of particles emitted by a point in space and expanding along the propagation direction with constant divergence (the green line in the Figure corresponds to a virtual source located at x=-100 cm).
+
+The emittance model describes the propagation of a gaussian beam in absence of active elements (deflecting magnets or focussing quadrupoles). It can be used to describe the beam propagation in the last track of an accelerator beamline. In the Figure, the blue line shows a beam focussing and then defocussing, with the minimum spot size at x = 0 cm, also called the beam waist position.
 
 
 .. toctree::
