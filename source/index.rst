@@ -10,6 +10,8 @@ Welcome to FRED's documentation!
    Getting Started/Applications
    Getting Started/Performance Summary
    Getting Started/Citation
+   Getting Started/Changelog
+
 
 
 .. toctree::

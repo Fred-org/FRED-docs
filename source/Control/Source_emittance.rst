@@ -1,3 +1,5 @@
+.. index:: ! emittance model
+
 Emittance model
 ------------------------------
 
@@ -16,6 +18,11 @@ where the square of the std deviation :math:`\sigma_x^2` along :math:`x`  is a q
 The model parameters are the emittance :math:`\varepsilon`, and the Twiss parameters :math:`\alpha` and :math:`\beta`.
 
 To use the emittance model, the following parameters must be set in a pencil beam definition:
+
+.. index:: emittanceX,twissAlphaX,twissBetaX
+.. index:: emittanceY,twissAlphaY,twissBetaY
+.. index:: emittanceRefPlaneDistance
+
 
 Xsec = emittance
 	activate the emittance model: the cross-section is automatically a bivariate gaussian distribution
