@@ -5,7 +5,7 @@ Source Definition
 
 The main direction of irradiation is defined be the *field*, which identifies a frame of reference directed along the beam axis. Thinking of a active scanning device, the accelerator beam is usually deflected with respect to beam axis in order to hit a set of control points in a plane containing the isocentre. At each control point, several parameters are defining the properties of the delivered beam, e.g. the transverse size of the beam, the amount of delivered particles, the energy of the beam, and so on.
 
-In FRED language *field* and *beam* are synonyms, and the same is true for *pencil beam* and *beam spot*. 
+In FRED language *field* and *beam* are synonyms, and the same is true for *pencil beam* and *beam spot*.
 The pencil beam allows to finely tune all the relevant parameters needed for reproducing a complete irradiation plan (a.k.a. RTPLAN).
 
 
@@ -21,7 +21,7 @@ The hierarchical structure of fields and pencil beams can be represented in this
     ├── PB_2
     └── PB_3
     Field_3
-    └── PB_1    
+    └── PB_1
 
 where each field has many pencil beams.
 A field can be moved around the phantom using the transform: directive. When a field moves, it rigidly brings together all belonging pencil beams. For this reason, the geometrical properties of a pencil beam are defined in the FoR of the referenced field, and not in the Room.
@@ -30,15 +30,15 @@ A field can be moved around the phantom using the transform: directive. When a f
 
 The `Quick and dirty` setup
 ------------------------------
-Using the default setup (i.e. using Field_0), it is possible to quickly explore the main parameters used to describe a pencil beam (or spot). This approach is recommended for quickly gaining control on how to instruct FRED to deliver particles to a target. In the default setup, Field_0 has a single pencil beam that propagates on-axis, so that actually it is possible to identify the pencil beam with the field itself. 
+Using the default setup (i.e. using Field_0), it is possible to quickly explore the main parameters used to describe a pencil beam (or spot). This approach is recommended for quickly gaining control on how to instruct FRED to deliver particles to a target. In the default setup, Field_0 has a single pencil beam that propagates on-axis, so that actually it is possible to identify the pencil beam with the field itself.
 
 
     pbParticle = particleID
-        type of primary particles delivered by the beam 
+        type of primary particles delivered by the beam
 
         `default = proton`
 
-    pbE = (float) [MeV] 
+    pbE = (float) [MeV]
         pencil beam energy
 
         `default = 100 MeV`
@@ -47,64 +47,64 @@ Using the default setup (i.e. using Field_0), it is possible to quickly explore 
         pencil beam energy per atomic mass unit (a.k.a. `per nucleon`)
 
     pbPSpread = (float)
-        fractional momentum spread (FWHM of a gauss distrib) 
+        fractional momentum spread (FWHM of a gauss distrib)
 
         `default = 0`
 
-    pbESpread = (float)  
+    pbESpread = (float)
         fractional energy spread (FWHM of a gauss distrib)
 
         `default = 0`
 
 
-    pbXsec = mode  
+    pbXsec = mode
         cross-section distribution:
-        
+
         pin|dot
             pin-like (pbFWHM=0) |pin|
 
         square|box|rect
             uniform square of side = pbFWHM |square|
-    
+
             rectangular distribution if pbFWHMx!=pbFWHMy |rect|
-        
+
         disc|circle|ellipse
             uniform disc with diameter = pbFWHM  |disc|
-    
+
             elliptical distribution if pbFWHMx!=pbFWHMy |ellipse|
-        
+
         gauss
             gaussian distribution with FHWM = pbFHWM |gauss|
 
             bivariate distribution if pbFWHMx!=pbFWHMy |bivariate|
 
-    pbFWHM = (float)  
+    pbFWHM = (float)
         FHWM parameter for cross section distribution (both x and y)
 
         `default = 0`
 
-    pbFWHMx = (float)  
+    pbFWHMx = (float)
         FHWM parameter for cross section distribution (along x)
 
         `default = 0`
 
-    pbFWHMy = (float)  
+    pbFWHMy = (float)
         FHWM parameter for cross section distribution (along y)
 
         `default = 0`
 
-    pbFWHMa = (float)  
+    pbFWHMa = (float)
         rotation angle [deg] of transverse plane for cross section distribution |alpha|
 
         `default = 0`
 
 
-    pbRmin = (float)  
+    pbRmin = (float)
         particles are generated for r>=pbRmin in the radial direction |hollow|
 
         `default = 0`
 
-    pbRmax = (float)  
+    pbRmax = (float)
         particles are generated for r<=pbRmax in the radial direction |clipped|
 
         `default = inf`
@@ -154,7 +154,7 @@ Using the default setup (i.e. using Field_0), it is possible to quickly explore 
 
 
 .. index::  ! pencil beam, pb:
-    
+
 The pencil beam
 ------------------------------
 The `pencil beam` (or spot, beamlet, etc.) describes the properties of a directed source of particles.
@@ -195,7 +195,7 @@ Some of the parameters are mandatory, which is explicitly marked and the default
 
 .. _particle_type:
 
-Particle type and number     
+Particle type and number
 """"""""""""""""""""""""
 
     particle = (particle name) [proton]
@@ -211,7 +211,7 @@ Particle type and number
 
 Energy and momentum
 """"""""""""""""""""""""
-    T = (float) [100] 
+    T = (float) [100]
         (mean) kinetic energy of primary particles [MeV].
 
     Tu = (float)
@@ -248,22 +248,22 @@ Transverse distribution  (a.k.a. cross-section)
                 pin-like (FWHM=0)
 
         *   square|box|rect
-                uniform square of side = FWHM 
-        
-                rectangular distribution if FWHMx!=FWHMy 
-            
+                uniform square of side = FWHM
+
+                rectangular distribution if FWHMx!=FWHMy
+
         *   disc|circle|ellipse
                 uniform disc with diameter = FWHM
-        
+
                 elliptical distribution if FWHMx!=FWHMy
-            
+
         *   gauss
                 gaussian distribution with FHWM = FHWM
 
                 bivariate distribution if FWHMx!=FWHMy
 
         *   uparrow
-                a distribution shaped like an arrow pointing in the up direction. It can be used to check alignment and that the field frame of reference is as expected. 
+                a distribution shaped like an arrow pointing in the up direction. It can be used to check alignment and that the field frame of reference is as expected.
 
     FWHM = (float)  [0]
         FHWM parameter for cross section distribution (both x and y)
@@ -306,7 +306,7 @@ The emittance model describes the propagation of a gaussian beam in absence of a
 
 
 .. toctree::
-   
-   Source_virtual_point_source
-   Source_emittance
+
+   Source Virtual Point Source
+   Source Emittance
 

@@ -49,8 +49,8 @@ Welcome to FRED's documentation!
    :caption: Examples:
 
    Examples/SimpleSimulationAndAnalysisImages/Simple simulation and analysis
-   Examples/Pencil beam in air
-   Examples/Pencil beam in water phantom
-   Examples/Spots gallery
-   Examples/SingleRoundBeamOnHeadPhantom
+   Examples/PencilPeamInAir/Pencil beam in air
+   Examples/PencilBeamInWaterPhantom/Pencil beam in water phantom
+   Examples/SpotsGallery/Spots gallery
+   Examples/SingleRoundBeamOnHeadPhantom/Single round beam on head phantom
 

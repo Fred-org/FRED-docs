@@ -34,7 +34,7 @@ Input file:
 
 
 Results:
-	
+
 	Four columns of spots corresponding to `disc`, `box`, `gauss` and `up arrow` cross-sections.
 
 	Variations from top row to bottom row:
@@ -49,7 +49,7 @@ Results:
     mhd_viewer.py out/Dose.mhd
 
 
-.. figure:: images/spots_gallery01.png
+.. figure:: spots_gallery01.png
     :alt: spots gallery
     :align: center
     :width: 60%
