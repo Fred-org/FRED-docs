@@ -26,17 +26,21 @@ You can always go back to the script that manages the installed distributions pr
 
 Python environment
 ------------------------------------------------------
-FRED needs a very basic python installation for running, namely python >=2.7 is required. Check your current version with:
+FRED needs a very basic python installation for running, namely python >=3.0 is required. Check your current version with:
 
 .. code-block:: bash
 
     $ python -V
 
-If you want to use the python scripts that are coming with FRED distribution for quick visualization and post-processing of 3D maps, you have to install the numpy and matplotlib packages.
+If you want to use the python scripts that are coming with FRED distribution for quick visualization and post-processing of 3D maps, you have to install the *numpy* and *matplotlib* packages.
 
 Environment variables
 ------------------------------------------------------
 In Unix-like operating systems (e.g. Linux or MacOSX) customization of setup is achieved via the use of environment variables. These variables are usually contained in a resource file. The FRED resource file is a hidden file in the user home folder *.fredrc*, which can be edited to manually change or fine tune the installation.
+
+
+In Windows the same functionality is achieved using the System Registry. The environment variables are stored as subkeys of the key ``HKEY_LOCAL_MACHINE\SOFTWARE\Fred-MC\fred``. These values can be visualized and changed using, for instance, the **Registry Editor** application.
+
 
 Environment variables are used for defining a default setup and their effect can be overwritten by command line options. Example of a typical *.fredrc* file:
 

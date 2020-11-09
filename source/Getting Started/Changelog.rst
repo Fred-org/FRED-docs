@@ -5,7 +5,7 @@ Stable Channel Changelog
 ------------------------------
 	*2020/10/08*
 
-	First stable version after merging of Linux and Windows versions. 
+	First stable version after merging Linux and Windows versions together. 
 
 	Main differences with previous releases:
 
