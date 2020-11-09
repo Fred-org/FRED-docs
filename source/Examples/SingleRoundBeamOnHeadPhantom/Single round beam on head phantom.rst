@@ -9,7 +9,7 @@ Input file:
 
 	# geometry definition
 	region<
-	 ID=phantom ; CTscan=MrHead ; lWriteCTHU=t ; score = Dose ; lWriteLETd_parts =t; 
+	 ID=phantom ; CTscan=MrHead ; lWriteCTHU=t ; score = Dose ; lWriteLETd_parts =t;
 	 pivot=[.5,.5,.5] ; O = [0,0,20]
 	region>
 
@@ -20,7 +20,7 @@ Input file:
 	# source definition
 	pbXsec=disc # round cross section with uniform distribution
 	pbFWHM=5 # diameter of the beam
-	pbE = 100 # energy of beam[MeV] 
+	pbE = 100 # energy of beam[MeV]
 
 	nprim=1e5 # no of primary protons to deliver
 
@@ -30,7 +30,7 @@ Input file:
 
 Results:
 
-.. figure:: MrHead/Dose_Phantom_overlay.png
+.. figure:: Dose_Phantom_overlay.png
     :alt: Dose-Phantom overlay
     :align: center
     :width: 90%
