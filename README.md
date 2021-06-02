@@ -2,7 +2,7 @@
 
 The FRED documentation is written in reStructuredText format and can be found at [fred-mc.org](http://www.fred-mc.org).
 
-The documentation is build with sphinx in version 3.2.1 using sphinx_rtd_theme template.
+The documentation is build with sphinx in version 4.0.2 using sphinx_rtd_theme template in version 0.5.2.
 
 To install the newest version of sphinx:
 
