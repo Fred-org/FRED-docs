@@ -141,9 +141,7 @@ TODO
     .. image:: Photos/NKrah.png
                :alt: Nils Krah photo (TODO)
 
-TODO
-
-|
+Working at University of Lyon, CNRS, CREATIS lab. Contributes to library and API development. Fred for proton imaging and CT conversion for proton dose calculation. Plugin development.
 
 |
 
