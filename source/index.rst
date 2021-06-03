@@ -6,7 +6,7 @@ Welcome to FRED's documentation!
    :caption: Getting Started with FRED:
 
    Getting Started/Introduction
-   Getting Started/Authors
+   Getting Started/Collaboration
    Getting Started/Applications
    Getting Started/Performance Summary
    Getting Started/Citation
