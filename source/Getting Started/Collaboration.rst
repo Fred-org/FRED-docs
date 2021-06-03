@@ -19,6 +19,7 @@ The main developer of FRED code.
 
 |
 
+|
 
 
 
@@ -26,12 +27,10 @@ The main developer of FRED code.
 
 .. sidebar:: Vincenzo Patera
 
-    .. image:: Photos/VPatera.png
-               :alt: Vincenzo Patera photo (TODO)
+    .. image:: Photos/VPatera.jpg
+               :alt: Vincenzo Patera photo
 
-TODO
-
-|
+Affiliated at Universita' di Roma "Sapienza" and INFN. FRED developer: nuclear interaction model, electromagnetic interaction model.
 
 |
 
@@ -49,17 +48,8 @@ TODO
     .. image:: Photos/MDeSimoni.png
                :alt: Micol De Simoni photo (TODO)
 
-TODO
-
-|
-
-|
-
-|
-
-|
-
-|
+Affiliated at "La Sapienza”, University of Rome, Physics department (Rome, Italy) and Istituto Nazionale di Fisica Nucleare (INFN), Section of Roma1 (Rome, Italy).
+My PhD thesis was focused on the development of tools for quality control on therapeutic Carbon beams with FRED. Now, I am doing a postDoc within the Applied Radiation Physics Group (ARPG) in Rome. My research activity is still focused on the development and improvement of models for the interactions of ions with matter in the FRED code.
 
 
 
