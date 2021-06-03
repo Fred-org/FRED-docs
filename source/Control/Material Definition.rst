@@ -21,10 +21,10 @@ Material directive allows to fine-tune an already defined material (e.g. water o
         Elemental composition of the material given as a list the short names of the elements. For instance, for water it would be [H,O].
 
     fractions = [`frac_1,frac_2,...`]
-        Relative number fraction of elements given in the composition. For instance for water it would be [0.667,0.333].
+        Relative number fraction of elements given in the composition. Values are in percentage. For instance for water it would be [66.7,33.3].
 
     weights = [`frac_1,frac_2,...`]
-        Relative weight fraction of elements given in the composition. For instance for water it would be [0.112,0.888].
+        Relative weight fraction of elements given in the composition. Values are in percentage. For instance for water it would be [11.2,88.8].
 
 
 To define a material based on other material, simply define:

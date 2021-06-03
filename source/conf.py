@@ -23,7 +23,7 @@ copyright = 'FRED collaboration'
 author = 'FRED collaboration'
 
 # The full version, including alpha/beta/rc tags
-version = '3.50 ⟶ 3.55'
+version = '3.50 ⟶ 3.57'
 # The full version, including alpha/beta/rc tags.
 release = '3.50'
 
