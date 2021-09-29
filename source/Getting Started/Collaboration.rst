@@ -9,8 +9,9 @@ Collaboration
 **Angelo Schiavi** :sup:`1,2`
 
 | :sup:`1` *Department of Basic and Applied Sciences for Engineering, Sapienza University of Rome, Italy*
+| :sup:`2` *Istituto Nazionale di Fisica Nucleare (INFN) - Section of Rome, Italy*
 
-| The main developer of FRED code.
+| The main developer of FRED code. He is a physicist specialised in modelling and numerical simulations. He is an Associate Professor at Sapienza University where he teaches General Physics in undergraduate courses, and Plasma Physics and Modern Physics in master courses. The most active fields of research are the optimisation of dose deposition in cancer therapy using accelerated charged particles; the study of gain and robustness of capsule implosions in Shock Ignition; the target design for Inertial Confinement Fusion; the generation and transport of fast electrons in dense hot plasma for advanced ignition schemes in fusion energy research; the acceleration and transport of proton beams for plasma diagnostics; the study of electron bunch instabilities in linacs and storage rings. 
 
 |
 
@@ -83,7 +84,7 @@ Collaboration
 
 | :sup:`1` *Institute of Nuclear Physics Polish Academy of Sciences in Kraków, Poland*
 
-| text-align: Antoni Ruciński is a medical physics researcher currently working at CCB Krakow proton beam therapy centre at the Institute of Nuclear Physics (IFJ) PAN in Krakow (Poland). His topics of interest range from clinical medical physics, to nuclear physics and radiobiological modeling for radiotherapy applications. He dedicated his research career to the development of computational and experimental methods to reduce physical and biological range uncertainties in clinical proton therapy. Being on the boundary of physics, medicine and biology, he believes that integrated or averaged quantities like dose, LETd and RBE are not the proper quantities to describe the biological effect of charged particles in tissues. Instead, to accurately model radiation effects it is necessary to include the nanoscale effect of DNA damage in particle therapy dosimetry, and eventually apply this approach in charged particle therapy treatment planning.
+| Antoni Ruciński is a medical physics researcher currently working at CCB Krakow proton beam therapy centre at the Institute of Nuclear Physics (IFJ) PAN in Krakow (Poland). His topics of interest range from clinical medical physics, to nuclear physics and radiobiological modeling for radiotherapy applications. He dedicated his research career to the development of computational and experimental methods to reduce physical and biological range uncertainties in clinical proton therapy. Being on the boundary of physics, medicine and biology, he believes that integrated or averaged quantities like dose, LETd and RBE are not the proper quantities to describe the biological effect of charged particles in tissues. Instead, to accurately model radiation effects it is necessary to include the nanoscale effect of DNA damage in particle therapy dosimetry, and eventually apply this approach in charged particle therapy treatment planning.
 | Antoni Ruciński graduated from University of Heidelberg in 2013 where he worked on the development of treatment planning strategies for moving targets and especially for prostate cancer patients. During his time in Heidelberg and Heilbronn (Germany), he has been trained as a medical physics expert working in the clinical routine of photon and particle therapy. Between 2015 and 2017 he has been a postdoctoral fellow in Rome at the National Institute of Nuclear Physics (INFN) working on charged secondary radiation produced by ion beams for range monitoring. From 2017 he is based in Krakow and leads research projects with the goals to improve radiobiological modeling and range monitoring in proton beam therapy.
 
 ------------

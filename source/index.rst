@@ -11,6 +11,7 @@ Welcome to FRED's documentation!
    Getting Started/Performance Summary
    Getting Started/Citation
    Getting Started/Changelog
+   Getting Started/Tools
 
 
 
@@ -27,6 +28,7 @@ Welcome to FRED's documentation!
 
    Setting Up/Installation
    Setting Up/Verification
+   Setting Up/GPU tuning
 
 .. toctree::
    :maxdepth: 1

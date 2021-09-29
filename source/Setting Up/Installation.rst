@@ -55,15 +55,23 @@ Environment variables are used for defining a default setup and their effect can
 
 Available options are:
 
+.. index::  ! FRED_MAX_THREADS
+
 FRED_MAX_THREADS = N
     Set the number of POSIX threads to be used for CPU execution. This is the typical number of threads used for particle tracking. Other parts of the code can use fewer threads to accomplish their tasks.
+
+.. index::  ! FRED_GPU_AVAILABLE
 
 FRED_GPU_AVAILABLE = 1|0
     - If 1, tell FRED that one or more GPUs are available for calculation.
     - If 0, no GPU available or do not use any GPU, even if installed on the system.
 
+.. index::  ! FGE_CL_PLATFORM
+
 FGE_CL_PLATFORM = N
     Tell FRED GPU Engine (FGE) to use OpenCL platform N for GPU computation.
+
+.. index::  ! FGE_CL_GPULIST
 
 FGE_CL_GPULIST = dev0, dev1, …, devN
     Specify a list of GPU devices that can be used for computation
@@ -75,6 +83,8 @@ FGE_CL_GPULIST = dev0, dev1, …, devN
 
         export FGE_CL_GPULIST=0,1,3
 
+.. index::  ! FRED_SEARCHPATH
+
 FRED_SEARCHPATH = dirList
     Specify a list of directories where files are looked for. The paths are separated by a colon as in the standard shell variable *$PATH*.
 
@@ -85,6 +95,8 @@ FRED_SEARCHPATH = dirList
 
         export FRED_SEARCHPATH=~/myFredPlugins:/usr/local/shared/fredScripts
 
+.. index::  ! FRED_VERBOSE
+
 FRED_VERBOSE = {0..5} (def. 3)
     Specifies the global verbosity level, i.e. the amount of information displayed in the terminal and saved to log file during a simulation.
 
@@ -94,6 +106,8 @@ FRED_VERBOSE = {0..5} (def. 3)
     .. code-block:: bash
 
         verbose: all {0..5}
+
+.. index::  ! FRED_ANSI_COLORS
 
 FRED_ANSI_COLORS = t|true
     Tell FRED to pretty-color the output to the terminal. By default coloring is off, and it can be turned on using this environment variable. The command line option `-C` can also be used on a run by run basis.

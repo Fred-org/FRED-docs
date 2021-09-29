@@ -75,6 +75,13 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
     lWriteCTHU = True
         Save the CTHU map. It works only when *CTscan* is given. This map is basically a copy of a CT map given in *CTscan*. The saved file is used by sceneViewerFred.py script to map a CT on scene and by mhd_overlay.py script to create a background for dose distribution.
 
+    lWriteRSP = False
+        Save the relative stopping power map. It works only when *CTscan* is given. Values are taken from the HU calibration curve supplied to Fred.
+
+        *New in version 3.58.8*
+
+
+
 Example
 
 .. code-block:: none

@@ -21,12 +21,26 @@ General options
 -v
 ~~~~~~~~~~~~~~~
 
-    Print version.
+    Print version info: number, changeset and build date.
 
     .. code-block:: bash
 
         $ fred -v
         fred Version 3.0  (028d8d2c3da) - 2019/10/01
+
+.. index::  ! option -vn
+
+-vn
+~~~~~~~~~~~~~~~
+
+    Print the version number only.
+
+    .. code-block:: bash
+
+        $ fred -vn
+        3.58.7
+
+    *New in version 3.58.7*
 
 .. index::  ! option -f
 
