@@ -223,6 +223,98 @@ Energy and momentum
     pSpread = (float) [0]
         fractional momentum spread (FWHM of a gauss distrib)
 
+.. important::
+    Redefinition of some parameters and choice of energy distribution.
+
+    *New in version 3.59.0*
+
+    E | Emean = (float) [100]
+        (mean) kinetic energy of primary particles [MeV].
+
+    Eu | Eumean = (float)
+        (mean) kinetic energy of primary particles per unit mass [MeV/u].
+
+    Espread = (float) [0]
+        fractional energy spread (FWHM of a gauss distrib)
+
+
+.. figure:: images/Edistributions.png
+    :alt: energy distributions
+    :align: center
+    :width: 75%
+
+    Energy distributions.
+
+.. important::
+    Monoenergetic source (default)
+        *New in version 3.59.0*
+
+    - Edistrib = monoenergetic | monochromatic | line
+        Particle energy is constant (line source).
+
+        *Note: any other energy distribution with zero width will automatically fall back to the monoenergetic source.*
+
+    - E | Emean | Eu | Eumean
+        kinetic energy of primary particles [MeV or MeV/u].
+
+
+
+.. important::
+    Gaussian source
+        *New in version 3.59.0*
+
+    - Edistrib = gauss | gaussian
+        Particle energy is sampled from a gaussian distribution.
+        
+        The distribution is defined by its mean value and its width.
+
+        The width is defined using the following alternatives: the standard deviation, the FHWM or the fractional spread.
+
+        
+
+
+    - E | Emean | Eu | Eumean
+        mean kinetic energy of primary particles [MeV or MeV/u].
+
+    - Estdev | Eustdev
+        standard deviation of gaussian energy distribution [MeV or MeV/u].
+
+    - EFWHM | EuFWHM
+        FWHM of gaussian energy distribution [MeV or MeV/u].
+
+    - Espread
+        fractional energy spread (FWHM of the gaussian distrib)
+
+    - Emin | Eumin =0 ; Emax | Eumax = inf
+        sampling range [MeV or MeV/u]. 
+
+        Portions of a gaussian distribution can be sampled by redefining the default range.
+
+
+.. important::
+    Uniform source
+        *New in version 3.59.0*
+
+    - Edistrib = uniform | flat | box | rect
+        Particle energy is sampled from a uniform distribution.
+
+        The distribution range can be defined in two alternative ways, using *Emean* and *EFWHM* or specifying the range with *Emin* and *Emax*.
+
+
+
+
+    - E | Emean | Eu | Eumean
+        mean kinetic energy of primary particles [MeV or MeV/u].
+
+    - EFWHM | EuFWHM
+        FWHM of energy distribution [MeV or MeV/u].
+
+    - Emin | Eumin ; Emax | Eumax
+        sampling range [MeV or MeV/u].
+
+
+
+
 .. _pos_dir:
 
 Position and direction
