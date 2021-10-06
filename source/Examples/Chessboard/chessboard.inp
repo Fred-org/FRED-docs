@@ -1,0 +1,25 @@
+# create a 'chessboard' irradiation pattern by displacing the field
+# use a single spot with square cross-section
+
+nprim=1e4
+
+def: side = 5
+def: spotSize = 1
+def: spotSpacing = spotSize
+def: nspot = int(side/spotSpacing)
+
+pb: 1 0 ; Xsec = box ; FWHM = $spotSize
+
+region: phantom ; L=[${side*1.5},${side*1.5},1] ; voxels = [200,200,1] ; pivot=[0.5,0.5,0]
+
+for(ix in range(nspot+1))< # control points in x
+    for(iy in range(nspot+1))< # control points in y
+
+        if(mod(ix,2)==mod(iy,2))< # choose alternate squares
+            def: x = -side/2 + ix*spotSpacing
+            def: y = -side/2 + iy*spotSpacing
+            transform: field_0 move_to $x $y -50
+            deliver: all
+        if>
+    for>
+for>

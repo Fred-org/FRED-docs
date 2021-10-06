@@ -45,6 +45,7 @@ Welcome to FRED's documentation!
    Control/Control Options
    Control/Command Line Options
    Control/Plugin Interface
+   Control/Meta input using Python
 
 .. toctree::
    :maxdepth: 1
@@ -55,4 +56,6 @@ Welcome to FRED's documentation!
    Examples/PencilBeamInWaterPhantom/Pencil beam in water phantom
    Examples/SpotsGallery/Spots gallery
    Examples/SingleRoundBeamOnHeadPhantom/Single round beam on head phantom
-
+   Examples/Spiralling spots/Spiralling spots
+   Examples/Chessboard/Chessboard
+   Examples/Radiation Hazard/Radiation Hazard

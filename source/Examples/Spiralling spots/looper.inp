@@ -1,0 +1,22 @@
+# create a spiralling irradiation pattern by displacing the phantom
+
+
+region: phantom ; L=[10,10,10] ; voxels = [101,101,20]
+
+
+def: N = 5 # number of turns
+def: nspots = 100 # total number of spots
+def: Rmax = 3 # major radius
+def: Rmin =0 # minor radius
+
+
+func: r(th) = Rmax-(Rmax-Rmin)*th/(N*2*pi)
+
+for(th in np.linspace(0,N*2*pi,nspots))<
+
+    def: x = r(th)*cos(th)
+    def: y = r(th)*sin(th)
+    transform: phantom move_to $x $y 0
+    deliver: all
+
+for>

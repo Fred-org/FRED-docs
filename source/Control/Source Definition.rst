@@ -246,10 +246,10 @@ Energy and momentum
     Energy distributions.
 
 .. important::
-    Monoenergetic source (default)
+    Line source (default)
         *New in version 3.59.0*
 
-    - Edistrib = monoenergetic | monochromatic | line
+    - Edistrib =  line | monoenergetic | monochromatic
         Particle energy is constant (line source).
 
         *Note: any other energy distribution with zero width will automatically fall back to the monoenergetic source.*

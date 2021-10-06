@@ -1,0 +1,45 @@
+# create a 'radiation hazard' irradiation pattern
+# use many spots with gaussian cross-section (programmatically build an rtplan)
+# use typical interspot spacing for uniform irradiation
+
+nprim = 1e3
+
+def: R = 3 
+def: side = 6*R*2
+def: spotSize = R/3
+
+func: thSpacing(r) = spotSize/r/3
+
+region: phantom ; L=[$side,$side,1] ; voxels = [200,200,1]
+
+field: 1; O=[0,0,-100] ; L=[40,40,10]
+pbmaster: 1 ; Xsec = gauss; FWHM=$spotSize ; T = 100; columns = [P.x,P.y]
+
+
+# build rtplan
+
+def: ipb = 0 # spot (i.e. pencil beam) index 
+
+# central disc
+for(r in np.arange(0,R,spotSize/3))<
+    for(th in np.linspace(0,2*pi,int(2*pi/thSpacing(r)),endpoint=False))<
+        def: x = r*cos(th)
+        def: y = r*sin(th)
+        pb: $ipb 1 $x $y
+        def: ipb = ipb+1
+    for>
+for>
+
+# sectors
+for(i in range(3))< # sector index
+    for(r in np.arange(1.5*R,5*R,spotSize/3))<
+        for(th in np.linspace(0,pi/3,int(pi/3/thSpacing(r))))<
+            def: x = r*cos(th+pi/3+2*pi/3*i)
+            def: y = r*sin(th+pi/3+2*pi/3*i)
+            pb: $ipb 1 $x $y
+            def: ipb = ipb+1
+        for>
+    for>
+for>
+
+deliver: all

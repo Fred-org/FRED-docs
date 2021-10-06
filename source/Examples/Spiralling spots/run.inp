@@ -1,0 +1,18 @@
+region: phantom ; L=[10,10,10] ; voxels = [101,101,20]
+transform: phantom move_to 3 0 0
+deliver: all
+transform: phantom move_to 2.82142 0.926645 0
+deliver: all
+transform: phantom move_to 2.36701 1.74279 0
+deliver: all
+transform: phantom move_to 1.68744 2.36968 0
+deliver: all
+transform: phantom move_to 0.854771 2.74896 0
+deliver: all
+transform: phantom move_to -0.045194 2.84813 0
+deliver: all
+transform: phantom move_to -0.921737 2.66318 0
+deliver: all
+...
+...
+...

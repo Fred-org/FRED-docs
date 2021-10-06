@@ -1,0 +1,39 @@
+nprim=1e4
+pb: 1 0 ; Xsec = box ; FWHM = 1
+region: phantom ; L=[7.5,7.5,1] ; voxels = [200,200,1] ; pivot=[0.5,0.5,0]
+transform: field_0 move_to -2.5 -2.5 -50
+deliver: all
+transform: field_0 move_to -2.5 -0.5 -50
+deliver: all
+transform: field_0 move_to -2.5 1.5 -50
+deliver: all
+transform: field_0 move_to -1.5 -1.5 -50
+deliver: all
+transform: field_0 move_to -1.5 0.5 -50
+deliver: all
+transform: field_0 move_to -1.5 2.5 -50
+deliver: all
+transform: field_0 move_to -0.5 -2.5 -50
+deliver: all
+transform: field_0 move_to -0.5 -0.5 -50
+deliver: all
+transform: field_0 move_to -0.5 1.5 -50
+deliver: all
+transform: field_0 move_to 0.5 -1.5 -50
+deliver: all
+transform: field_0 move_to 0.5 0.5 -50
+deliver: all
+transform: field_0 move_to 0.5 2.5 -50
+deliver: all
+transform: field_0 move_to 1.5 -2.5 -50
+deliver: all
+transform: field_0 move_to 1.5 -0.5 -50
+deliver: all
+transform: field_0 move_to 1.5 1.5 -50
+deliver: all
+transform: field_0 move_to 2.5 -1.5 -50
+deliver: all
+transform: field_0 move_to 2.5 0.5 -50
+deliver: all
+transform: field_0 move_to 2.5 2.5 -50
+deliver: all
