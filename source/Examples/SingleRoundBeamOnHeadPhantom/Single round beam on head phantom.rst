@@ -8,14 +8,7 @@ Input file:
 .. code-block:: python
 
 	# geometry definition
-	region<
-	 ID=phantom ; CTscan=MrHead ; lWriteCTHU=t ; score = Dose ; lWriteLETd_parts =t;
-	 pivot=[.5,.5,.5] ; O = [0,0,20]
-	region>
-
-	lUseInternalHU2Mat= t # use built-in HU calibration curves based on Schneider 1996/2000
-	lAllowHUClamping=t # clamp HU values outside defined range
-
+	region: phantom; CTscan=MrHead; pivot=[0.5,0.5,0.0]; O=[0,0,0]; score= Dose
 
 	# source definition
 	pbXsec=disc # round cross section with uniform distribution
@@ -23,6 +16,7 @@ Input file:
 	pbE = 100 # energy of beam[MeV]
 
 	nprim=1e5 # no of primary protons to deliver
+
 
 
 .. tip::

@@ -55,7 +55,7 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
 
         **dose** - map of deposited dose [Gy]
 
-        **LETd** - map of dose-averaged LET [MeV/cm]
+        **LETd** - map of dose-averaged LET [MeV cm^2 / g]
 
         **track** -
 
