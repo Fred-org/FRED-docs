@@ -12,7 +12,7 @@ To install the RTD template:
 
     pip3 install sphinx-rtd-theme
 
-To buind the documentation execute:
+To build the documentation execute:
 
     make clean
     make html
