@@ -181,10 +181,10 @@ A pencil beam definition starts with the **pb:** directive. Also the multiline s
 Some of the parameters are mandatory, which is explicitly marked and the default parameters for the optional are given.
 
     PBID : pencil beam ID (mandatory)
-        Number (or name) identifying the pencil beam.
+        Number identifying the pencil beam.
 
     FID : referenced field ID (mandatory)
-        Number (or name) identifying the referenced field.
+        Number identifying the referenced field.
 
     .. important::
         Please pay attention to the syntax of pb: directive

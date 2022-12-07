@@ -48,6 +48,8 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
     CTscan = filename
         Load a 3D voxel map from a CT scan with values in HU. A calibration curved is used to convert from HU to material composition and density.
 
+.. _region_scorers:
+
     score = None
         List of scorers requested for this region. Allowed dense scorers are:
 
@@ -55,11 +57,9 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
 
         **dose** - map of deposited dose [Gy]
 
+        **dose-to-water** - map of dose converted into :ref:`dose-to-water <dosetowater>` [Gy]
+
         **LETd** - map of dose-averaged LET [MeV cm^2 / g]
-
-        **track** -
-
-        **counts** -
 
         **None** - no scorer activated
 

@@ -39,6 +39,7 @@ Welcome to FRED's documentation!
    Control/Geometry Definition
    Control/Source Definition
    Control/Material Definition
+   Control/Scoring quantities
    Control/Delivery Manager
    Control/Physics Control
    Control/Radiobiology

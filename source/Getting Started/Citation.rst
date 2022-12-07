@@ -7,7 +7,8 @@ Schiavi, A., Senzacqua, M., Pioli, S., Mairani, A., Magro, G., Molinelli, S., Ci
 *Fred: a GPU-accelerated fast-Monte Carlo code for rapid treatment plan recalculation in ion beam therapy.*
 Physics in Medicine and Biology, 62(18), 7482–7504. (2017)
 https://doi.org/10.1088/1361-6560/aa8134
-`BibTeX <https://iopscience.iop.org/export?articleId=0031-9155/62/18/7482&doi=10.1088/1361-6560/aa8134&exportFormat=iopexport_bib&exportType=abs&navsubmit=Export+abstract>`_
+
+.. `BibTeX <https://iopscience.iop.org/export?articleId=0031-9155/62/18/7482&doi=10.1088/1361-6560/aa8134&exportFormat=iopexport_bib&exportType=abs&navsubmit=Export+abstract>`_
 
 Other references:
 
