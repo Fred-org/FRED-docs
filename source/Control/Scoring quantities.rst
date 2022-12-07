@@ -2,7 +2,7 @@ Scoring quantities
 ==================
 
 Several quantities can be scored inside the defined regions, e.g. dose, LETd.
-Present implementation of scores in Fred is resticted to voxel-based scorers defined *on the same grid* of the referenced region. For instance, when scoring the dose on the phantom region, Fred accumulates the denergy deposited in each voxel of the phantom during the particle tracking. At the end of the run, the deposited energy is divided by the mass of the voxel and the dose map is saved to disk in mhd format.
+Present implementation of scores in Fred is restricted to voxel-based scorers defined *on the same grid* of the referenced region. For instance, when scoring the dose on the phantom region, Fred accumulates the energy deposited in each voxel of the phantom during particle tracking. At the end of the run, the deposited energy is divided by the mass of the voxel and the dose map is saved to disk in mhd format.
 
 Scorers are actived within the definition of each region, :ref:`as reported here <region_scorers>`.
 
