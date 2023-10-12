@@ -1,13 +1,13 @@
 FRED Collaboration and Contributors
 ===================================
 
-The FRED Collaboration is a panel of researchers, scientists and clinicians actively involved in the design and evolution of FRED project. They meet on a regular basis for discussing development directions, for prioritising lines of research, for identifying improvement strategies. 
+The **FRED Collaboration** is a panel of researchers, scientists and clinicians actively involved in the design and evolution of FRED project. They meet on a regular basis for discussing development directions, for prioritising lines of research, for identifying improvement strategies. 
 Presently the panel is composed by the following members: A. Schiavi, J. Gajewsky, N. Krah, I. Rinaldi, A. Rucinsky and V. Patera.
 
 
+FRED Collaboration
+------------------
 
-Contributors
-------------
 
 .. figure:: Photos/ASchiavi.png
    :width: 200 px
@@ -43,20 +43,6 @@ Contributors
 
 ------------
 
-.. figure:: Photos/MDeSimoni.png
-            :width: 200 px
-            :alt: Micol De Simoni photo
-            :align: right
-
-**Micol De Simoni** :sup:`1,2`
-
-| :sup:`1` *Department of Basic and Applied Sciences for Engineering, Sapienza University of Rome, Italy*
-| :sup:`2` *Istituto Nazionale di Fisica Nucleare (INFN) - Section of Rome, Italy*
-
-| My PhD thesis was focused on the development of tools for quality control on therapeutic Carbon beams with FRED. Now, I am doing a postDoc within the Applied Radiation Physics Group (ARPG) in Rome. My research activity is still focused on the development and improvement of models for the interactions of ions with matter in the FRED code.
-
-------------
-
 .. figure:: Photos/JGajewski.jpg
             :width: 200 px
             :alt: Jan Gajewski photo
@@ -67,19 +53,6 @@ Contributors
 | :sup:`1` *Institute of Nuclear Physics Polish Academy of Sciences in Kraków, Poland*
 
 | Application of FRED for quality assurance and research in proton radiotherapy, as well as configuration of FRED, specific for a facility, including preparation of beam models. Responsible for new FRED versions testing and validation.
-
-------------
-
-.. figure:: Photos/MGarbacz.png
-            :width: 200 px
-            :alt: Magdalena Garbacz photo
-            :align: right
-
-**Magdalena Garbacz** :sup:`1`
-
-| :sup:`1` *Institute of Nuclear Physics Polish Academy of Sciences in Kraków, Poland*
-
-| My role was to test subsequent code versions, validate dose calculations against TPS in CCB, validate calculations of LETd and RBE distributions against publication data/other MC codes. Currently I am analyzing RBE-weighted doses and LETd distributions in studies of the late side effects of proton therapy.
 
 ------------
 
@@ -129,6 +102,38 @@ Contributors
 |
 
 ------------
+
+
+Contributors
+------------
+
+.. figure:: Photos/MDeSimoni.png
+            :width: 200 px
+            :alt: Micol De Simoni photo
+            :align: right
+
+**Micol De Simoni** :sup:`1,2`
+
+| :sup:`1` *Department of Basic and Applied Sciences for Engineering, Sapienza University of Rome, Italy*
+| :sup:`2` *Istituto Nazionale di Fisica Nucleare (INFN) - Section of Rome, Italy*
+
+| My PhD thesis was focused on the development of tools for quality control on therapeutic Carbon beams with FRED. Now, I am doing a postDoc within the Applied Radiation Physics Group (ARPG) in Rome. My research activity is still focused on the development and improvement of models for the interactions of ions with matter in the FRED code.
+
+------------
+
+.. figure:: Photos/MGarbacz.png
+            :width: 200 px
+            :alt: Magdalena Garbacz photo
+            :align: right
+
+**Magdalena Garbacz** :sup:`1`
+
+| :sup:`1` *Institute of Nuclear Physics Polish Academy of Sciences in Kraków, Poland*
+
+| My role was to test subsequent code versions, validate dose calculations against TPS in CCB, validate calculations of LETd and RBE distributions against publication data/other MC codes. Currently I am analyzing RBE-weighted doses and LETd distributions in studies of the late side effects of proton therapy.
+
+------------
+
 
 .. figure:: Photos/CWinterhalter.jpg
             :width: 200 px

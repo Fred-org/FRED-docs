@@ -23,9 +23,9 @@ copyright = 'FRED collaboration'
 author = 'FRED collaboration'
 
 # The full version, including alpha/beta/rc tags
-version = '3.50 ⟶ 3.59'
+version = '3.50 ⟶ 3.60'
 # The full version, including alpha/beta/rc tags.
-release = '3.50'
+release = '3.60'
 
 # -- General configuration ---------------------------------------------------
 # If your documentation needs a minimal Sphinx version, state it here.

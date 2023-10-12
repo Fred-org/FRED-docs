@@ -1,3 +1,5 @@
+.. _licencePage:
+
 FRED licence agreements
 =======================
 

@@ -12,7 +12,7 @@ It will contain links to the following services:
 * General Info
 
 
-While we are setting up all this, please use the following general contact form for direct inquiries to the FRED developement team.
+While we are setting up all this, please use the following general contact form for direct inquiries to the FRED development team.
 
 
 `General contact form <../_static/ContactForm_GeneralSupport.html>`_
