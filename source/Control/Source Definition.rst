@@ -401,4 +401,5 @@ The emittance model describes the propagation of a gaussian beam in absence of a
 
    Source Virtual Point Source
    Source Emittance
+   Source SigSqr model
 

@@ -1,5 +1,13 @@
-Collaboration
-=================================
+FRED Collaboration and Contributors
+===================================
+
+The FRED Collaboration is a panel of researchers, scientists and clinicians actively involved in the design and evolution of FRED project. They meet on a regular basis for discussing development directions, for prioritising lines of research, for identifying improvement strategies. 
+Presently the panel is composed by the following members: A. Schiavi, J. Gajewsky, N. Krah, I. Rinaldi, A. Rucinsky and V. Patera.
+
+
+
+Contributors
+------------
 
 .. figure:: Photos/ASchiavi.png
    :width: 200 px

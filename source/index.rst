@@ -21,6 +21,21 @@ Welcome to FRED's documentation!
    genindex
 
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Download:
+
+   Download/Licences
+   Download/Registration
+   Download/Latest release
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Support:
+
+   Support/Support
+
 
 .. toctree::
    :maxdepth: 2
