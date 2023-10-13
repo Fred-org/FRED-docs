@@ -29,14 +29,6 @@ Welcome to FRED's documentation!
    Download/Registration
    Download/Latest release
 
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Support:
-
-   Support/Support
-
-
 .. toctree::
    :maxdepth: 2
    :caption: Setting up FRED:
@@ -44,6 +36,13 @@ Welcome to FRED's documentation!
    Setting Up/Installation
    Setting Up/Verification
    Setting Up/GPU tuning
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Support:
+
+   Support/Support
+
 
 .. toctree::
    :maxdepth: 1

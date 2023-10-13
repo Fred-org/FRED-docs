@@ -43,6 +43,14 @@ In Unix-like operating systems (e.g. Linux or MacOSX) customization of setup is 
 
 In Windows the same functionality is achieved using the System Registry. The environment variables are stored as subkeys of the key ``HKEY_LOCAL_MACHINE\SOFTWARE\Fred-MC\fred``. These values can be visualized and changed using, for instance, the **Registry Editor** application.
 
+.. note::
+    You could edit environment variables also using a simple GUI:
+
+    .. code-block:: bash
+
+        fred -config
+
+    *New in version 3.60 : work in progress!*
 
 Environment variables are used for defining a default setup and their effect can be overwritten by command line options. Example of a typical *.fredrc* file:
 
