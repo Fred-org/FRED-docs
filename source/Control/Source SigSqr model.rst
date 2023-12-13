@@ -74,39 +74,36 @@ which gives in output
 
 .. important::
 
-    In the previous example, the parameters have been obtained with respect to the isocenter position which is at coordinate z=0 cm  along the propagation direction. Since particles are generated in the field FoR, we have to inform FRED of the distance from field origin to the isocenter in order to have the correct spot size evolution along the beam axis. To this purpose, we have to use the ``emittanceRefPlaneDistance`` parameter.
+    In the previous example, the parameters have been obtained with respect to the isocenter position which is at coordinate z=0 cm  along the propagation direction. Since particles are generated in the field FoR, we have to inform FRED of the distance from field origin to the isocenter in order to have the correct spot size evolution along the beam axis. To this purpose, we define ``D_ISO`` has the distance of pencil beam origin and the isocenter.
 
 
-Finally, the input lines for source definition are
+sigmaSqrModel = [D_ISO, aX, bX, cX, aY, bY, cY]
+    D_ISO : distance (cm) from pencil beam origin to ISO center plane
 
+    aX, bX, cX : interpolation parameters for sigma_x as described above
+
+    aY, bY, cY : interpolation parameters for sigma_y as described above
+
+    parmeters for Y are optional: if not present, the values of X are mirrored
+
+The input lines for source definition using the sigma `squared model model` syntax are
 
 .. code-block::
 
     field: 1 ; O = [0,0,-55]; L=[10,10,20]; pivot = [0.5,0.5,0.2]
 
-    pb<
-        ID = 1 ;
-        fieldID = 1
-        particle = proton
-        T = 100 # MeV
-        Xsec = emittance
-
-        twissAlphaX=0.05220831320123199
-        twissBetaX=83.25066186389999
-        emittanceX=0.0032824274429144556
-
-        emittanceRefPlaneDistance=55; # Field_1 origin is at 55 cm from ISO
-    pb>
+    pb: 1 1 ; particle = proton; T = 100; sigmaSqrModel = [55,0.27326425714285724,-0.0003427399999999939,3.9535714285714174e-05]
 
 
-.. figure:: images/Setup_emittance_100MeV.png
+
+.. figure:: images/Setup_sigmasqrmodel.png
     :alt: setup
     :align: center
     :width: 80%
 
 
 
-The evolution of beam cross section using the emittance model is represented by the following Figure
+The evolution of beam cross section using the sigma squared model is represented by the following Figure
 
 .. figure:: images/emittance_long.png
     :alt: emittance xsec
