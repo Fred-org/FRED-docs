@@ -55,6 +55,7 @@ Welcome to FRED's documentation!
    Control/Material Definition
    Control/Scoring quantities
    Control/Delivery Manager
+   Control/Variance Reduction
    Control/Physics Control
    Control/Radiobiology
    Control/Control Options
@@ -74,3 +75,5 @@ Welcome to FRED's documentation!
    Examples/Spiralling spots/Spiralling spots
    Examples/Chessboard/Chessboard
    Examples/Radiation Hazard/Radiation Hazard
+   Examples/McNamara RBE/McNamara RBE
+

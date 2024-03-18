@@ -48,6 +48,11 @@ LETd-based models
 
 The following section presents the implemented models with the default values that can be overridden in the input file.
 
+.. hint::
+
+	You can use the built-in models described below. It is anyhow very simple to implement new RBE models as post-processing of FRED output. For inspiration, have a look at the :ref:`python script <RBEMcNamaraModel>` in the examples that re-implements the McNamara model.
+
+
 
 .. index::  ! lRBE_Carabe,RBE_Carabe
 

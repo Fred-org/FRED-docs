@@ -23,3 +23,7 @@ https://doi.org/10.3389/fphy.2020.578605
 
 Krah, N., Patera, V., Rit, S., Schiavi, A., Rinaldi, I. *Regularised patient-specific stopping power calibration for proton therapy planning based on proton radiographic images.* Physics in Medicine and Biology (2019) 64 (6), art. no. 065008
 https://doi.org/10.1088/1361-6560/ab03db
+
+McNamara K., Schiavi A., Borys D., Brzezinski K., Gajewski J., Kopec R., Rucinski A., Skora T., Makkar S., Hrbacek J., Weber D.C., Lomax A.J., Winterhalter C.
+*GPU accelerated Monte Carlo scoring of positron emitting isotopes produced during proton therapy for PET verification* Physics in Medicine and Biology (2022) 67 art. no. 244001
+https://doi.org/10.1088/1361-6560/aca515

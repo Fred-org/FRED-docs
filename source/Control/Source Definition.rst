@@ -202,10 +202,10 @@ Particle type and number
         particle type to be delivered (a.k.a. primary particle). Check the list of available particles using ``fred -particles``
 
     N = (float) [1]
-        actual no of primary particles delivered by the pencil beam (a.k.a. fluence). By default this no is 1, so that the corresponding dose map is `per primary`
+        actual no. of primary particles delivered by the pencil beam (a.k.a. fluence). By default this no. is 1, so that the corresponding dose map is `per primary`
 
     nprim = (#) [1e4 = 10000]
-        no of Monte Carlo histories to be simulated. This sets the level of statistics used to reproduce the mean dose map of the pencil beam.
+        no. of Monte Carlo histories to be simulated. This sets the level of statistics used to reproduce the mean dose map of the pencil beam.
 
 .. _energy_momentum:
 
@@ -395,6 +395,8 @@ By default the propagation is paraxial, namely the particles are propagating alo
 The Virtual point Source Distribution (VSD) describes a source of particles emitted by a point in space and expanding along the propagation direction with constant divergence (the green line in the Figure corresponds to a virtual source located at x=-100 cm).
 
 The emittance model describes the propagation of a gaussian beam in absence of active elements (deflecting magnets or focussing quadrupoles). It can be used to describe the beam propagation in the last track of an accelerator beamline. In the Figure, the blue line shows a beam focussing and then defocussing, with the minimum spot size at x = 0 cm, also called the beam waist position.
+
+The **Sigma Squared** is a powerful model that can express all three previous models with a single formalism. The beam envelope can be described with three  parameters :math:`a,b,c`, which are easily obtained from typical spot size measurements taken in a treatment centre as part of the accelerator QA protocol. The parameters can be interpolated from one measured point to another one, as part of a beam model definition.
 
 
 .. toctree::
