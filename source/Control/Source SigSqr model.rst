@@ -110,3 +110,50 @@ The evolution of beam cross section using the sigma squared model is represented
     :align: center
     :width: 80%
 
+
+.. note::
+
+    The sigma squared model overrides any previous declaration concerning the beam envelope such as `Xsec` or `FWHM`. So these parameters are not needed and can be undefined.
+
+
+Examples
+--------
+
+Single-line input
+"""""""""""""""""
+Three spots using **pb:** directive in single-line mode:
+
+.. code-block::
+
+    region: phantom; L=[10,10,0.1]; voxels=[101,101,1]; pivot=[0.5,0.5,0]; material=PMMA
+
+    field: 1 ; O = [0,0,-200] ; L = [20,20,2] ; pivot = [0.5,0.5,0.5]
+
+    pb: 1 1; particle=p; E=70; N=1e7; v=[-2,0,200]; sigmaSqrModel=[200,0.36343,0.00294,0.00004731]
+    pb: 2 1; particle=p; E=80; N=2e7; v=[ 0,0,200]; sigmaSqrModel=[200,0.47652,0.00285,0.00004755]
+    pb: 3 1; particle=p; E=90; N=3e7; v=[+2,0,200]; sigmaSqrModel=[200,0.49745,0.00300,0.00004342]
+
+
+.. figure:: images/3spots_sigmasqrmodel.png
+    :alt: 3 spots
+    :align: center
+    :width: 80%
+
+
+Column-mode input using pbmaster
+""""""""""""""""""""""""""""""""
+Three spots using **pbmaster:** directive to define common parameters, e.g. field to ISO distance. Equivalent to previous example, but more compact. Useful when dealing with thousands of PBs, for instance in a patient treatment plan.
+
+.. code-block::
+
+    region: phantom; L=[10,10,0.1]; voxels=[101,101,1]; pivot=[0.5,0.5,0]; material=PMMA
+
+    field: 1 ; O = [0,0,-200] ; L = [20,20,2] ; pivot = [0.5,0.5,0.5]
+
+    pbmaster: 1 ; particle=p; sigmaSqr_D_ISO=200; v.z=200; columns=[E,N,v.x,v.y,sigmaSqr_aX,sigmaSqr_bX,sigmaSqr_cX]
+
+    pb: 1 1 70 1e7 -2 0 0.36343 0.00294 0.00004731
+    pb: 2 1 80 2e7  0 0 0.47652 0.00285 0.00004755
+    pb: 3 1 90 3e7 +2 0 0.49745 0.00300 0.00004342
+
+The parameters that you can predeclare in the **pbmaster:** directive have to following names: ``sigmaSqr_D_ISO,sigmaSqr_aX,sigmaSqr_bX,sigmaSqr_cX,sigmaSqr_aY,sigmaSqr_bY,sigmaSqr_cY``.

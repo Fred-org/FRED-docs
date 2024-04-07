@@ -1,6 +1,8 @@
 Variance Reduction
 ==================
 
+*New in version 3.70.0*
+
 This module allows to estimate and reduce the statistical error of Monte Carlo (MC) simulations. The strategy applies to the **dose** map in the **phantom**.
 
 The MC simulation is split into a series of subsequent iterations, each one tracking a sample of the actual primary particles delivered by the accelerator in the given RTPLAN.
@@ -44,6 +46,16 @@ Using a language borrowed from the gamma-index criterium definition, we define t
 
     lStratifiedSampling = (T/F)
         use stratification in pencil beam primary sampling, i.e. the number of primary per PB is proportional to the PB fluence (number of primary particles delivered by the accelerator)
+
+    lWriteDoseMeanError = (T/F)
+        output the map of computed dose mean error in ``out/DoseMeanError.mhd``
+
+    lWriteDoseStdev = (T/F)
+        output the map of computed dose standard deviation in ``out/DoseStdev.mhd``
+
+
+
+During the iterations, the dose error is reported in the output file, and logged in the ``out/log/iterations.txt`` file.
 
 
 Three different modes of operations can be used
