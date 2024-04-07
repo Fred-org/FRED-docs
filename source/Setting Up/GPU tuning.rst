@@ -3,6 +3,13 @@ GPU tuning
 
 GPU cards come with very different hardware capabilities and performance. It is possible to fine tune the GPU performance using a few parameters that control the execution of the particle tracking kernel.
 
+.. tip::
+
+    You can check the GPUs installed on your system using ``fred -gpusetup`` 
+    and then use the provided information to configure your environment using ``fred -config``.
+
+
+
 Available environment variables and their default values:
 
 .. code-block:: bash

@@ -28,6 +28,21 @@ The reference values of ``alpha_X`` and ``beta_X`` can be defined in the input f
 	RBE_alphaX = 0.0722	
 	RBE_betaX = 0.0502
 
+
+*New in version 3.70.0*
+
+	It is possible to prescribe a different value for ``alpha_X`` and ``beta_X`` for each organ in a CT scan. You can do this by loading two maps for each region as in the following example. The values can be actually defined at the voxel level. Setting voxels to 0 will actually correspond to mask those part of the CT, and they will not be included in the final RBE calculation.
+
+	.. code-block:: none
+
+		region<
+		    ID=phantom
+		    CTscan='inp/CT_ExtROICrop_1.5x1.5x1.5.mhd'
+		    score=[Dose,RBE,LETd]
+		    alphaBetaX=[inp/myAlphaX.mhd,inp/myBetaX.mhd]
+		region>
+
+
 .. note::
 	The results of RBE models (e.g. maps of RBE, Dose_Bio, alpha and beta parameters) are saved in the directory ``out/RBE`` which is created only if RBE-based calculations are requested.
 	
@@ -47,6 +62,11 @@ LETd-based models
 --------------------
 
 The following section presents the implemented models with the default values that can be overridden in the input file.
+
+.. hint::
+
+	You can use the built-in models described below. It is anyhow very simple to implement new RBE models as post-processing of FRED output. For inspiration, have a look at the :ref:`python script <RBEMcNamaraModel>` in the examples that re-implements the McNamara model.
+
 
 
 .. index::  ! lRBE_Carabe,RBE_Carabe
