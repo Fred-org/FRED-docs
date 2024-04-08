@@ -58,6 +58,7 @@ Welcome to FRED's documentation!
    Control/Variance Reduction
    Control/Physics Control
    Control/Radiobiology
+   Control/Beta Activation
    Control/Control Options
    Control/Command Line Options
    Control/Plugin Interface
