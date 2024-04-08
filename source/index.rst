@@ -53,7 +53,7 @@ Welcome to FRED's documentation!
    Control/Geometry Definition
    Control/Source Definition
    Control/Material Definition
-   Control/Scoring quantities
+   Control/Scoring Quantities
    Control/Delivery Manager
    Control/Variance Reduction
    Control/Physics Control
@@ -76,4 +76,4 @@ Welcome to FRED's documentation!
    Examples/Chessboard/Chessboard
    Examples/Radiation Hazard/Radiation Hazard
    Examples/McNamara RBE/McNamara RBE
-
+   Examples/PatientWorkflow/Patient Workflow
