@@ -54,6 +54,7 @@ Welcome to FRED's documentation!
    Control/Source Definition
    Control/Material Definition
    Control/Scoring Quantities
+   Control/Scoring Particles
    Control/Delivery Manager
    Control/Variance Reduction
    Control/Physics Control
