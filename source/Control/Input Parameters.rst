@@ -38,7 +38,7 @@ Finally, the patient-specific information, such as CT scans, field configuration
 
     include: rtplan.inp
 
-The included files can also contain other **include:** directives. The parser will make sure that any recursive or circular inclusion chains are not present.
+The included files can also contain other **include:** directives. The parser will ensure that any recursive or circular inclusion chains are absent.
 
 An example of a more complex input structure for a three fields irradiation to be delivered into ROOM1 could look like this::
 
