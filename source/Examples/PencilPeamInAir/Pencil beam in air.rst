@@ -1,24 +1,24 @@
 Pencil beam in air
 =================================
 
-A simple simulation of a single pencil beam in air. The setup and the method presented in this example can be used for validation of lateral propagation of a single pencil beam in air. It is useful for validation and optimisation of beam envelope propagation. In this example an emittance model is used and the description can be found in :ref:`emittance_model`.
+A simple simulation of a single pencil beam in air. The setup and the method presented in this example can be used to validate the lateral propagation of a single pencil beam in the air. It is helpful for the validation and optimization of beam envelope propagation. In this example, an emittance model is used, and the description can be found in :ref:`emittance_model`.
 
 
 Input file
 ----------------------------------------
 
-The beam is defined by means of emittance model with parameters corresponding to the beam sizes of 0.5, 0.3, 0.2, 0.4 and 0.8 |nbsp| cm (sigma) at distances from the isocentre of -20, -10, 0, 10 and 20 |nbsp| cm, respectively. The distance of the source to the isocentre is 40 cm. The dose is scored in an air phantom of size 5x5x40 |nbsp| cm\ :sup:`3` with pixel size 1x1x10 |nbsp| cm\ :sup:`3` . The material of the phantom inherits from air and changes the radiation length to large value to minimise the effect of Multiple Coulomb Scattering (MCS). This is required when the measurements of the lateral beam sizes are performed in air.
+The beam is defined by means of an emittance model with parameters corresponding to the beam sizes of 0.5, 0.3, 0.2, 0.4, and 0.8 |nbsp| cm (sigma) at distances from the isocentre of -20, -10, 0, 10 and 20 |nbsp| cm, respectively. The distance from the source to the isocentre is 40 cm. The dose is scored in an air phantom of size 5x5x40 |nbsp| cm\ :sup:`3` with pixel size 1x1x10 |nbsp| cm\ :sup:`3` . The material of the phantom is inherited from the air and changes the radiation length to a large value to minimize the effect of multiple coulomb scattering (MCS). This is required when the measurements of the lateral beam sizes are performed in air.
 
 .. code-block:: python
 
     ### Phantom ###
     region<
         ID=Phantom
-        O=[0, 0, -20]
+        O=[ 0, 0, -20 ]
         f=[ 0, 0, 1 ]
         u=[ 0, 1, 0 ]
-        L=[ 5, 5, 40]
-        voxels=[50,50,40]
+        L=[ 5, 5, 40 ]
+        voxels=[ 50, 50, 40 ]
         material=airNOMCS # material with no MCS effect
     region>
 
@@ -31,7 +31,7 @@ The beam is defined by means of emittance model with parameters corresponding to
         T = 150 # MeV
         Xsec = emittance
 
-        # the Twiss parameters corresponding to the beam sizes of 0.5, 0.3, 0.2, 0.4 and 0.8 cm (sigma)
+        # the Twiss parameters corresponding to the beam sizes of 0.5, 0.3, 0.2, 0.4, and 0.8 cm (sigma)
         # at distances from the ISO of -20, -10, 0, 10 and 20 cm, respectively
         twissAlphaX=-1.235900963624794
         twissBetaX=8.3916636857885
@@ -48,7 +48,7 @@ The beam is defined by means of emittance model with parameters corresponding to
         longName ='air without MCS'
         basedOn = air
         rho = 1.205e-3
-        Lrad = 1e32 # high radiation length is set to minimise the impact of MCS
+        Lrad = 1e32 # high radiation length is set to minimize the impact of MCS
     material>
 
 Simple analysis
