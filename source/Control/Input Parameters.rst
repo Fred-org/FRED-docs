@@ -11,7 +11,7 @@ If you want to use a different name, you supply the path to the input file using
 Input structure
 ------------------------------------------------------
 
-The order of input lines is usually not important, with the exception of directives parsed by the delivery manager.
+The order of input lines is usually unimportant, except for directives the delivery manager parses.
 It is possible to split an input file into many files with the directive:
 
 .. code-block:: python
@@ -26,13 +26,13 @@ For instance we can put all definition of materials properties into a single **m
 
     include: path_to_dir/materials.inp
 
-Then we can group all region definitions into a **regions.inp** file, containing for instance the gantry structures and range shifters for a particular treatment room in a facility.
+Then we can group all region definitions into a **regions.inp** file, for instance, the gantry structures and range shifters for a particular treatment room in a facility.
 
 .. code-block:: python
 
     include: path_to_dir/regions.inp
 
-Finally the patient-specific information, such as CT scans, field configuration and related pencil beam information can be stored into an **rtplan.inp** which is changing for each irradiation.
+Finally, the patient-specific information, such as CT scans, field configuration, and related pencil beam information, can be stored in an **rtplan.inp**, which changes for each irradiation.
 
 .. code-block:: python
 
@@ -76,12 +76,12 @@ The input structure is merged into a single sequential file, which is saved to `
 Input syntax
 ------------------------------------------------------
 
-The input files are parsed by FRED using a free format text syntax. Efforts have been made in order to allow the most natural and easy way of writing the input files.
+The input files are parsed by FRED using a free format text syntax. Efforts have been made to allow the most natural and easy way of writing the input files.
 
 White spaces
 ````````````````````````````````````````````
 
-In general, white spaces (spaces, tabs, etc.) are ignored and discarded. Exception is the definition of strings (names, paths, etc.) where white space is preserved.
+In general, white spaces (spaces, tabs, etc.) are ignored and discarded. The exception is the definition of strings (names, paths, etc.) where white space is preserved.
 
 
 Comments
@@ -155,20 +155,20 @@ The multi-line definition splits the declaration of an object into several lines
 
 Units
 ````````````````````````````````````````````
-FRED is using predefined units for inputs and outputs. In input files FRED is using:
+FRED is using predefined units for inputs and outputs. In input files, FRED is using:
 
-- All dimensional inputs, like region size definition, region translations, etc. are given in [cm].
-- All angles, mostly for rotations, are given in [degrees].
-- Mean ionisation potential is given in [eV].
-- Energy in given in [MeV].
-- Lateral beam parameters (point-like source, emittance) are given in [cm].
-- All versors are unitless and are normalised internally.
-- Density is given in [g/cm\ :sup:`3`].
+- All dimensional inputs, like region size definition, region translations, etc. are given in [:math:`cm`].
+- All angles, mostly for rotations, are given in [:math:`degrees`].
+- Mean ionization potential is given in [:math:`eV`].
+- Energy is given in [:math:`MeV`].
+- Lateral beam parameters (point-like source, emittance) are given in [:math:`cm`].
+- All versors are unitless and are normalized internally.
+- Density is given in [:math:`\frac{g}{cm^3}`].
 
 FRED outputs the simulation results in units:
 
-- Dose, including the RBE-weighted dose are saved in [Gy].
-- Dose-averaged LET is saved in [MeV/cm].
-- Density  is saved in [g/cm\ :sup:`3`].
-- Deposited energy is saved in [MeV].
+- Dose, including the RBE-weighted dose are saved in [:math:`Gy`].
+- Dose-averaged LET is saved in [:math:`\frac{MeV \cdot cm^2}{g}`].
+- Density is saved in [:math:`\frac{g}{cm^3}`].
+- Deposited energy is saved in [:math:`MeV`].
 

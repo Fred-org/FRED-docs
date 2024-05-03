@@ -3,15 +3,15 @@ Plugin Interface
 
 Plugin API
 ----------
-
+ 
 
 - Plugin initialisation
-
+ 
     .. c:function:: extern "C" int UserHook_init(const char *vers)
 
        Initialises the plugin.
 
-       :param vers: current version of calling Fred executable
+       :param vers: current version of calling FRED executable
        :type vers: const char *
        :return: error code (0=OK)
        :rtype: int
@@ -42,7 +42,7 @@ Plugin API
         :return: APPLY/SKIP
         :rtype: int
 
-        If APPLY is returned, Fred internal *step routines* will executed, hence the plugin acts as a diagnostic tool, not changing the particle evolution.
+        If APPLY is returned, FRED internal *step routines* will executed, hence the plugin acts as a diagnostic tool, not changing the particle evolution.
 
         If instead `SKIP` is returned, then internal step routines are bypassed, and the plugin is taking complete control of the stepping procedure.
 
@@ -59,7 +59,7 @@ Plugin API
 
     .. c:function:: extern "C" bool isPluginThreadSafe()
 
-       Tell Fred that the plugin can be executed in parallel on many threads. It is reponsability of the developer to check that data race conditions are not occurring during multi-thread execution. By default, Fred assumes that plugin code is **not thread-safe** and switches to serial, i.e. single-thread, execution.
+       Tell FRED that the plugin can be executed in parallel on many threads. It is reponsability of the developer to check that data race conditions are not occurring during multi-thread execution. By default, FRED assumes that plugin code is **not thread-safe** and switches to serial, i.e. single-thread, execution.
 
        Semaphore control functions are provided for enforcing atomic operations on shared data.
 
@@ -195,7 +195,7 @@ Input parameters for the plugin can be written in the main input file (e.g. ``fr
 Step functions
 --------------
 
-This class of functions can be used to access particle and medium properties via the opaque structure ``Step`` passed by Fred to the plugin.
+This class of functions can be used to access particle and medium properties via the opaque structure ``Step`` passed by FRED to the plugin.
 
 - Particle properties
 

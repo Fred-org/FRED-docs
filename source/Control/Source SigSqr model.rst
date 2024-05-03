@@ -5,7 +5,7 @@
 Sigma Squared model
 ------------------------------
 
-This is a *simplified* and *user-friendly* model that allows to directly import spot size measurements into a Fred simulation.
+This is a *simplified* and *user-friendly* model that allows to directly import spot size measurements into a FRED simulation.
 As the name is describing, the model is based on fitting the beam spot size using a second order polynomial, as described in the emittance model section:
 
 Let's take as a reference the case described by the following plot, showing the spot size measurements (blue stars) in the *x* direction taken at 5 different positions around the isocenter for a 100 MeV beam in a cyclotron facility.

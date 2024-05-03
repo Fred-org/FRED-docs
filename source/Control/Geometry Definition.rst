@@ -73,10 +73,10 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
         Save the LETd numerator and denominator maps. These can be used to add the dose-averaged LET maps from multiple simulations (for instance for simulations of a single patient plan where multiple fields ware simulated separately). Than the final LETd map can be obtained by summing separately the numerators and denominators from multiple simulations, and calculating the quotient.
 
     lWriteCTHU = True
-        Save the CTHU map. It works only when *CTscan* is given. This map is basically a copy of a CT map given in *CTscan*. The saved file is used by sceneViewerFred.py script to map a CT on scene and by mhd_overlay.py script to create a background for dose distribution.
+        Save the CTHU map. It works only when *CTscan* is given. This map is basically a copy of a CT map given in *CTscan*. The saved file is used by sceneViewerFRED.py script to map a CT on scene and by mhd_overlay.py script to create a background for dose distribution.
 
     lWriteRSP = False
-        Save the relative stopping power map. It works only when *CTscan* is given. Values are taken from the HU calibration curve supplied to Fred.
+        Save the relative stopping power map. It works only when *CTscan* is given. Values are taken from the HU calibration curve supplied to FRED.
 
         *New in version 3.58.8*
 

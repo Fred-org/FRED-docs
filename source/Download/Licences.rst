@@ -4,9 +4,9 @@ FRED licence agreements
 =======================
 
 
-The download and use of the **FRED software*** distributed on this website are governed by the following licences and conditions.
+The download and use of the **FRED software*** distributed on this website are governed by the following licenses and conditions.
 
-\* Here, **FRED software*** refers to the FRED computer program in binary form, the suite of accompanying python scripts, and the FRED data libraries.
+\* Here, **FRED software*** refers to the FRED computer program in binary form, the suite of accompanying Python scripts, and the FRED data libraries.
 
 
 FRED Single User Licence Agreement (academic or educational use)

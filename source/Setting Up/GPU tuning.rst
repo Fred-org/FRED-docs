@@ -1,7 +1,7 @@
 GPU tuning
 =================================
 
-GPU cards come with very different hardware capabilities and performance. It is possible to fine tune the GPU performance using a few parameters that control the execution of the particle tracking kernel.
+GPU cards come with very different hardware capabilities and performance. It is possible to fine-tune the GPU performance using a few parameters that control the execution of the particle tracking kernel.
 
 .. tip::
 
@@ -22,20 +22,20 @@ Available environment variables and their default values:
 .. index::  ! FGE_PRIMARY_MAX_BATCH
 
 FGE_PRIMARY_MAX_BATCH
-    Set number of primary particles that are sent to GPU for each kernel invocation.
+    Set the number of primary particles sent to GPU for each kernel invocation.
 
-    A large enough buffer will reduce the communication times between CPU and GPU and reduce the number of kernel invocations.
+    A large enough buffer will reduce the number of kernel invocations and the communication times between CPU and GPU.
 
 .. index::  ! FGE_SECONDARY_MULT_FACTOR
 
 FGE_SECONDARY_MULT_FACTOR
     Increase the particle buffer by this *integer* multiplication factor.
 
-    For a proton beam, the number of secondary produced is always less than the primary number, so by default FGE_SECONDARY_MULT_FACTOR is set to 1.
-    For a Carbon beam, the number of secondary fragments per primary ion is up to 3.5 in the therapeutic range, so FGE_SECONDARY_MULT_FACTOR = 4 is typically requested.
+    For a proton beam, the number of secondary produced is always less than the primary number, so by default, FGE_SECONDARY_MULT_FACTOR is set to 1.
+    For a carbon beam, the number of secondary fragments per primary ion is up to 3.5 in the therapeutic range, so FGE_SECONDARY_MULT_FACTOR = 4 is typically requested.
 
 .. note::
-    Fred will quietly signal the occurance of a particle buffer overflow at the end of a simulation. In that case try to undestand the problem, and readjust the buffer size using FGE_SECONDARY_MULT_FACTOR.
+    FRED will quietly signal the occurrence of a particle buffer overflow at the end of a simulation. In that case, try to understand the problem and readjust the buffer size using FGE_SECONDARY_MULT_FACTOR.
 
 .. index::  ! FGE_CL_NQUEUEDEV
 
@@ -43,7 +43,7 @@ FGE_CL_NQUEUEDEV
     Set the number of independent execution queues on each device. 
 
     A number >=2 is required for hiding memory transfer latency between CPU and GPU. 
-    A number 4-6 of queues is required for increasing performance in the generation of the dose influence matrix Dij.
+    A number 4-6 of queues is required to increase performance in generating the dose influence matrix Dij.
 
 .. tip::
     In case of memory shortage on the GPU, the variables FGE_PRIMARY_MAX_BATCH, FGE_SECONDARY_MULT_FACTOR, and FGE_CL_NQUEUEDEV can be used to reduce the memory needed by the GPU kernel.
@@ -52,4 +52,4 @@ FGE_CL_NQUEUEDEV
 
     Check the relative performance using for instance :code:`fred -benchmark 1e7`.
 
-    Once you found a satisfactory set of parameters, you could add the envvars to the configuration file of Fred (.fredrc in Linux or Registry in Windows).
+    Once you find a satisfactory set of parameters, you can add the envvars to the FRED configuration file (.fredrc in Linux or Registry in Windows).

@@ -5,8 +5,8 @@ Variance Reduction
 
 This module allows to estimate and reduce the statistical error of Monte Carlo (MC) simulations. The strategy applies to the **dose** map in the **phantom**.
 
-The MC simulation is split into a series of subsequent iterations, each one tracking a sample of the actual primary particles delivered by the accelerator in the given RTPLAN.
-By acquiring statistical information after each iteration, the algorithm estimates the mean dose error in the voxel.
+The MC simulation is split into a series of subsequent iterations, each tracking a sample of the actual primary particles delivered by the accelerator in the given RTPLAN.
+The algorithm estimates the mean dose error in the voxel by acquiring statistical information after each iteration.
 
 Each iteration will produce an estimate :math:`d_{i,n}` of the dose, where  :math:`i` is the voxel index and :math:`n` is the iteration index.
 
@@ -55,7 +55,7 @@ Using a language borrowed from the gamma-index criterium definition, we define t
 
 
 
-During the iterations, the dose error is reported in the output file, and logged in the ``out/log/iterations.txt`` file.
+The dose error is reported in the output file and logged in the ``out/log/iterations.txt`` file during the iterations.
 
 
 Three different modes of operations can be used
@@ -71,7 +71,7 @@ Fixed repeated iterations
 
     varianceReduction: maxNumIterations=10
 
-In this mode, the simulation is repeated a fixed number of times. By default stratification is off, so the number of primaries per PB is that prescribed by using ``nprim``. If you want to use stratified sampling, you have to require it explicitly
+In this mode, the simulation is repeated a fixed number of times. By default, stratification is off, so the number of primaries per PB is prescribed using ``nprim``. If you want to use stratified sampling, you have to require it explicitly
 
 .. code-block::
 
@@ -90,14 +90,14 @@ Recalculation percentage
 
 The number of simulated primary particles is a given percentage of the total number of primaries delivered by the accelerator in the RTPLAN.
 
-By default the simulation is split in 10 iterations, and stratification is applied.
+By default, the simulation is split into 10 iterations, and stratification is applied.
 
 
 Dose error reduction
 --------------------
 
-A goal error using ``DD`` is specified, and FRED keeps on iterating the simulation until the dose mean error reduces below ``DD`` in all the voxel above the ``DCO``.
-If convergence is not reached, after a ``maxNumIterations`` the iterating procedure is stopped.
+A goal error using ``DD`` is specified, and FRED keeps on iterating the simulation until the dose mean error reduces below ``DD`` in all the voxels above the ``DCO``.
+If convergence is not reached, the iterating procedure is stopped after a ``maxNumIterations``.
 
 .. code-block::
 

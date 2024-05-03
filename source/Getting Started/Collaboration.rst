@@ -95,7 +95,7 @@ FRED Collaboration
 | :sup:`1` *University of Lyon, France*
 | :sup:`2` *CNRS/CREATIS, UMR 5220, Lyon, France*
 
-| Contributes to library and API development. Fred for proton imaging and CT conversion for proton dose calculation. Plugin development.
+| Contributes to library and API development. FRED for proton imaging and CT conversion for proton dose calculation. Plugin development.
 
 |
 
