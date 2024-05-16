@@ -92,5 +92,18 @@ Available scorers
 **activation**
     positron emitting activation of patient tissue. See :ref:`Beta+ activation section <beta_plus_activation>` for details.
 
+.. _spectraScorer:
+
+**spectra**
+    spectra of a given quantity for each voxel. See :ref:`spectra scorer section <spectra_scorer>` for details.
+
+
+Description of specific scorers
+
+.. toctree::
+
+   Beta Activation
+   Spectra Scorer
+   Influence Matrix Format
 
 

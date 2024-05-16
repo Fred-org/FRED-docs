@@ -51,7 +51,7 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
 .. _region_scorers:
 
     score = None
-        List of scorers requested for this region. Allowed dense scorers are:
+        List of scorers requested for the region. Allowed dense scorers are:
 
         **Edep** - map of deposited energy per primary [MeV]
 
@@ -59,12 +59,20 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
 
         **dose-to-water** - map of dose converted into :ref:`dose-to-water <dosetowater>` [Gy]
 
-        **LETd** - map of dose-averaged LET [MeV cm^2 / g]
+        **LETd** - map of dose-averaged LET [:math:`\mathrm{\frac{MeV\,cm^2}{g}}`]
+
+        **spectra** - map of spectra for each voxel - see :ref:`spectra scorer <spectraScorer>` for more details
 
         **None** - no scorer activated
+    
+    scoreij = None
+        List of influence matrix scorers for the region. Any quantity shown above can be defined here to be scored as an influence matrix. See :ref:`influence matrix description <influenceMatrixDescription>` for more details about the output file format.  
+
+    scoringMask - None
+        A mask describing the voxels to score. The mask applies for all scorers defined in the **score** and **scoreij** lists. The image can be of any type but must have the same voxel grid as the region. The quantity will be only scored for voxels with values larger than 0.   
 
     lWriteDensity = False
-        Save the density map of the region. Can be useful when loading the region properties for a CT scan in HU, in order to check HU to density conversion.
+        Save the density map of the region. It can be helpful when loading the region properties for a CT scan in HU to check HU to density conversion.
 
     lWriteImat = False
         Save the imat map, i.e. the index of materials.
@@ -77,8 +85,6 @@ The *front*, *up*, and *left* vectors are normalized internally to unit vectors,
 
     lWriteRSP = False
         Save the relative stopping power map. It works only when *CTscan* is given. Values are taken from the HU calibration curve supplied to FRED.
-
-        *New in version 3.58.8*
 
 
 
