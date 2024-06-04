@@ -1,8 +1,11 @@
+.. _latestRelease:
+
+
 Latest release
 ==============
 
     .. important::
-        Using the Software, You agree to be bound by its terms:ref:`Licence <licencePage>`. 
+        Using the Software, You agree to be bound by its :ref:`Licence <licencePage>`. 
         If You disagree with the terms of the Licence, You may not use the Software.
 
 Once downloaded, go to the :ref:`Installation <Installation>` page and follow the instructions.
@@ -13,14 +16,23 @@ Linux and MacOSX version
 
 .. only:: builder_html
 
-	:download:`Fred v. 3.60.7 <fred_3.60.7.run>`
+	:download:`Fred v. 3.70.0 <fred_3.70.0.run>`
 
 Windows 10 version
 ------------------
 
 .. only:: builder_html
 
-	:download:`Fred v. 3.60.0 <fred_3.60.0.exe>`
+	:download:`Fred v. 3.70.0 <fred_3.70.0.exe>`
+
+
+
+-----
+
+.. toctree::
+   :maxdepth: 1
+
+   Old Versions
 
 
 .. .. warning::

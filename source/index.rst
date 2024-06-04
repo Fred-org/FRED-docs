@@ -1,6 +1,10 @@
 Welcome to FRED's documentation!
 ================================
 
+.. |arrow| image:: _static/rightarrowblue.gif
+
+|arrow| :ref:`new version 3.70 <latestRelease>` available now!!!
+
 .. toctree::
    :maxdepth: 1
    :caption: Getting Started with FRED:
