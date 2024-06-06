@@ -32,7 +32,7 @@ FRED needs an elementary Python installation for running, namely Python >=3.0 is
 
 .. code-block:: bash
 
-    $ python -v
+    $ python -V
 
 If you want to use the Python scripts that come with FRED distribution for quick visualization and post-processing of 3D maps, you have to install the *numpy* and *matplotlib* packages.
 
