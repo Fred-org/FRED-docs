@@ -36,7 +36,8 @@ Check your current version with:
 
     $ python3 -V
 
-FRED looks for ``python3`` in your system: make sure that ``python3`` is pointing to a Python version >=3.10. A good solution is to create a virtual env with an up-to-date Python version. Have a look at the official Python documentation on how to do that. 
+.. warning::
+    It is often the case on many systems that ‘python’ and ‘python3’ refer to different  python versions. FRED looks for ``python3`` in your system: make sure that ``python3`` is pointing to a Python version >=3.10. A good solution is to create a virtual env with an up-to-date Python version. Have a look at the official Python documentation on how to do that. 
 
 If you want to use the Python scripts that come with FRED distribution for quick visualization and post-processing of 3D maps, you have to install the *numpy* and *matplotlib* packages.
 
