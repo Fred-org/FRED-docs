@@ -28,11 +28,15 @@ You can always go back to the script that manages the installed distributions pr
 
 Python environment
 ------------------------------------------------------
-FRED needs an elementary Python installation for running, namely Python >=3.0 is required. Check your current version with:
+FRED needs Python for running: the minimal Python version required is **3.10** (since FRED v. 3.70). 
+
+Check your current version with:
 
 .. code-block:: bash
 
-    $ python -V
+    $ python3 -V
+
+FRED looks for ``python3`` in your system: make sure that ``python3`` is pointing to a Python version >=3.10. A good solution is to create a virtual env with an up-to-date Python version. Have a look at the official Python documentation on how to do that. 
 
 If you want to use the Python scripts that come with FRED distribution for quick visualization and post-processing of 3D maps, you have to install the *numpy* and *matplotlib* packages.
 
