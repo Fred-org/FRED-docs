@@ -1,0 +1,14 @@
+# create a "Mental Ball" and deliver proton beam
+
+region: phantom; CTscan = CT.mha ; pivot=[0.5,0.5,0]; O=[0,0,0]; score = [dose]; lWriteDensity=t
+
+override: phantom HU-1000 outside Sphere8cm.mha
+override: phantom HU+1376 inside  Sphere8cm.mha
+override: phantom HU+32   inside  Sphere7cm.mha
+
+
+lUseInternalHU2Mat=t
+
+pb: 1 0 ; Xsec = disc ; FWHM = 4 ; particle = p ; E = 100; N=1e8
+
+nprim = 1e5
