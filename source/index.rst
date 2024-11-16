@@ -82,3 +82,4 @@ Welcome to FRED's documentation!
    Examples/Radiation Hazard/Radiation Hazard
    Examples/McNamara RBE/McNamara RBE
    Examples/PatientWorkflow/Patient Workflow
+   Examples/OverridingMaterials/Override
