@@ -26,7 +26,7 @@ For instance, if McNamara RBE model for protons is activated (``lRBE_McNamara=t`
         write RBE values
 
 
-.. index::  ! Verbosity
+.. _Verbosity_options:
 
 Verbosity
 ~~~~~~~~~~~~~~~~~~
@@ -82,14 +82,15 @@ Example of detailed manipulation of verbosity level:
 	verbose: radiobiology 5
 
 
-Other
-~~~~~~~~~~~~~~~~~~
+.. _Other_control_options:
 
-	
-lplotray = [F|t]
+Other control options
+~~~~~~~~~~~~~~~~~~~~~
+
+``lplotray = bool (default = false)``
 	.. index::  ! lplotray
 	
-	activate/deactivate output of detailed track information for each traced particle. It can be used for geometry checking and visual debugging of a simulation using ``sceneViewerFred.py`` script.
+	Activate/deactivate output of detailed track information for each traced particle. It can be used for geometry checking and visual debugging of a simulation using ``sceneViewerFred.py`` script.
 
 	.. important::
 		When ``lplotray=t``, the code automatically switches to **serial** execution on a single process on the CPU. Hence use it with just a few primaries per pencil beam, since the tracking rate will be very low and FRED will produce large text files containing all steps of the tracks.
@@ -103,6 +104,24 @@ lplotray = [F|t]
 
 
 
-allowOverlapping: gantry phantom
+``allowOverlapping = [region1 region2 ...]``
+	.. index::  ! allowOverlapping
 
+	The directive allows to define with regions can overlap and which one is the master region to track the particles in, in case of overlap.	
+	For instance, it can be useful to define the gantry regions (range shifters, extendable nozzle, etc.) overlapping with the patient CT (Phantom). In this case, the directive ``allowOverlapping: gantry phantom`` will force FRED to track particles inside the gantry region containing all the nozzle elements, even if it intersects with the patient CT, which can happen when the extendable nozzle is used and it is moved close to the patient body.
+	
+``ijFormatVersion = int (default = 20)``
+	.. index::  ! ijFormatVersion
+	
+	Determines the version of the influence matrix file format. See :ref:`influenceMatrixDescription` for more details.
+
+``lAllowHUClamping = bool (default = false)``
+	.. index::  ! lAllowHUClamping
+	
 	TODO
+
+``lWriteIJPerPrim = bool (default = true)``
+	.. index::  ! lWriteIJPerPrim
+
+	Normalize the influence matrix results for a given quantity per primary
+	
