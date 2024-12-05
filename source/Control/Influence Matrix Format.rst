@@ -15,7 +15,7 @@ The format is designed to be as compact as possible. The file is divided into tw
 
 - image header (48B):
     - **file version** (int32 : 4B)
-        Version of the file in the integer format (30 for this file version).
+        Version of the file in the integer format (20 for this file version).
     - **[X,Y,Z] size** (3 x int32 : 3 x 4B)
         Size of the image.
     - **[X,Y,Z] voxel spacing** (3 x float32 : 3 x 4B)
