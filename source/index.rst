@@ -83,3 +83,4 @@ Welcome to FRED's documentation!
    Examples/McNamara RBE/McNamara RBE
    Examples/PatientWorkflow/Patient Workflow
    Examples/OverridingMaterials/Override
+   Examples/ReassignHU/ReassignHU
