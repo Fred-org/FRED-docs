@@ -16,24 +16,24 @@ Linux and MacOSX version
 
 .. only:: builder_html
 
-	:download:`Fred v. 3.70.0 <fred_3.70.0.run>`
+	:download:`Fred v. 3.76.0 <https://www.fred-mc.org/FRED_repository/Linux/fred_3.76.0.run>`
 
 Windows 10 version
 ------------------
 
 .. only:: builder_html
 
-	:download:`Fred v. 3.70.0 <fred_3.70.0.exe>`
+	:download:`Fred v. 3.70.0 <https://www.fred-mc.org/FRED_repository/Windows/fred_3.70.0.exe>`
 
 
 
------
 
-.. toctree::
-   :maxdepth: 1
+Previous versions download page
++++++++++++++++++++++++++++++++
 
-   Old Versions
+    `Linux and MacOSX <https://www.fred-mc.org/FRED_repository/Linux/>`_
 
+    `Windows <https://www.fred-mc.org/FRED_repository/Windows/>`_
 
 .. .. warning::
 ..     This version was tested on NVIDIA hardware using the NVIDIA drivers until version 470.

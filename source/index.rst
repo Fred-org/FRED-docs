@@ -3,7 +3,7 @@ Welcome to FRED's documentation!
 
 .. |arrow| image:: _static/rightarrowblue.gif
 
-|arrow| :ref:`new version 3.70 <latestRelease>` available now!!!
+|arrow| :ref:`new version 3.76 <latestRelease>` available now!!!
 
 .. toctree::
    :maxdepth: 1
