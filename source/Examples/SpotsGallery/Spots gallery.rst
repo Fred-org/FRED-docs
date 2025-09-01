@@ -46,7 +46,7 @@ Results:
 
 .. code-block:: bash
 
-    mhd_viewer.py out/Dose.mhd
+    map_viewer.py out/Dose.mhd
 
 
 .. figure:: spots_gallery01.png

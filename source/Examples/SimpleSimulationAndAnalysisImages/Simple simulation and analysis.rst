@@ -49,7 +49,7 @@ For instance, you can visualize the dose using a command:
 
 .. code-block:: bash
 
-    $ mhd_viewer.py out/Dose.mhd
+    $ map_viewer.py out/Dose.mhd
 
 .. figure:: plot01.png
     :alt: Default setup dose (linear scale)
@@ -72,7 +72,7 @@ You can visualize the *ddd* (dose-depth-distribution) using:
 
 .. code-block:: bash
 
-    $ mhd_sliceint.py out/Dose.mhd -p
+    $ map_sliceint.py out/Dose.mhd -p
 
 .. figure:: ddd.png
     :alt: default setup ddd

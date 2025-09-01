@@ -56,7 +56,7 @@ Simple analysis
 
 .. code-block:: bash
 
-    $ mhd_viewer.py out/Dose.mhd
+    $ map_viewer.py out/Dose.mhd
 
 .. figure:: plot01.png
     :alt: Default setup dose (linear scale)

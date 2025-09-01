@@ -50,7 +50,7 @@ Simple analysis
 
 .. code-block:: bash
 
-    $ mhd_sliceint.py out/Dose.mhd -p
+    $ map_sliceint.py out/Dose.mhd -p
 
 .. figure:: plot.png
     :alt: Bragg peak in water

@@ -24,6 +24,11 @@ Input file:
 
 Results:
 
+
+.. code-block:: bash
+
+    $ map_viewer.py -CT out/MrHead.mhd out/Dose.mhd
+
 .. figure:: Dose_Phantom_overlay.png
     :alt: Dose-Phantom overlay
     :align: center

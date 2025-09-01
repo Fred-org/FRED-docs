@@ -29,7 +29,7 @@ The dose distribution overlapped wit the CT can be visualized with:
 
 .. code-block:: bash
 
-    $ mhd_viewer.py -CT CT.mhd out/Dose.mhd -DCO 0.1
+    $ map_viewer.py -CT CT.mhd out/Dose.mhd -DCO 0.1
 
 which enables to inspect the dose distribution.
 
